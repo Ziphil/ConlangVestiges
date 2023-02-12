@@ -30,6 +30,11 @@ $main-smartphone-horizontal-padding: 24rpx;
   }
 }
 
+@mixin text-size-adjust {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 @mixin smartphone {
   @media screen and (max-width: 880px) {
     @content;

@@ -41,7 +41,7 @@
 
 .header-title {
   letter-spacing: 0.2em;
-  font-size: 150%;
+  font-size: 175%;
   font-weight: bold;
 }
 
@@ -149,7 +149,10 @@
 }
 
 .section-description {
-  margin-block-start: 60px;
+  margin-block-start: 96px;
+  padding-block: 64px;
+  color: white;
+  background: linear-gradient(to right, $dark-primary-color, $primary-color, $dark-primary-color);
 }
 
 .comment {
@@ -160,14 +163,13 @@
 .comment-heading {
   font-size: 150%;
   font-weight: bold;
-  color: $primary-color;
+  color: $secondary-color;
   letter-spacing: 0.05em;
-  background: linear-gradient(to bottom, transparent 60%, $secondary-color 60%);
   align-self: flex-start;
 }
 
 .comment-main {
-  margin-block-start: 24px;
+  margin-block-start: 32px;
   row-gap: 8px;
   display: flex;
   flex-direction: column;
