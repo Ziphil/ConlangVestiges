@@ -14,6 +14,9 @@ $black-color: hsl(0, 0%, 10%);
   display: flex;
   align-items: center;
   justify-content: center;
+  @include smartphone {
+    padding-inline: $main-smartphone-horizontal-padding;
+  }
 }
 
 .section-inner {
@@ -45,31 +48,6 @@ $black-color: hsl(0, 0%, 10%);
   letter-spacing: 0.2em;
   font-size: 150%;
   font-weight: bold;
-}
-
-$header-number-size: 96px;
-
-.header-number {
-  width: $header-number-size;
-  height: div($header-number-size, 2);
-  inset-block-end: - div($header-number-size, 2);
-  border-end-start-radius: div($header-number-size, 2);
-  border-end-end-radius: div($header-number-size, 2);
-  font-size: 350%;
-  background-color: $wine-color;
-  border: solid $black-color 2px;
-  border-top: none;
-  display: flex;
-  position: absolute;
-  z-index: 1;
-}
-
-.header-number-inner {
-  margin-block-start: - div($header-number-size, 2);
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: center;
 }
 
 .section-title {
@@ -115,6 +93,9 @@ $header-number-size: 96px;
 .exhibit {
   aspect-ratio: 6 / 7;
   border: solid $wine-color 24px;
+  @include smartphone {
+    border-width: 12px;
+  }
 }
 
 .exhibit-inner {
@@ -134,12 +115,17 @@ $header-number-size: 96px;
 }
 
 .comment {
+  display: flex;
+  flex-direction: column;
 }
 
 .comment-heading {
   font-size: 150%;
   font-weight: bold;
   color: $wine-color;
+  letter-spacing: 0.05em;
+  background: linear-gradient(to bottom, transparent 60%, $gold-color 60%);
+  align-self: flex-start;
 }
 
 .comment-main {

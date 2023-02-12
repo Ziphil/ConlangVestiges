@@ -5,6 +5,7 @@ $text-color: hsl(0, 0, 10%);
 
 $main-width: 1200px;
 $main-horizontal-padding: 64px;
+$main-smartphone-horizontal-padding: 24rpx;
 
 
 @mixin line-height($line-height: $line-height) {
@@ -22,5 +23,11 @@ $main-horizontal-padding: 64px;
     margin-block-end: - line-intrusion($line-height);
     display: block;
     content: "";
+  }
+}
+
+@mixin smartphone {
+  @media screen and (max-width: 880px) {
+    @content;
   }
 }
