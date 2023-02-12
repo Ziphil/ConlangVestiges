@@ -76,17 +76,20 @@ manager.registerElementRule("title", "page", (transformer, document, element) =>
     });
     self.appendElement("div", (self) => {
       self.addClassName("navigation");
-      self.appendElement("a", (self) => {
-        self.addClassName("navigation-link");
-        self.setAttribute("href", (number - 1).toString() + ".html");
-        self.appendElement("img", (self) => {
-          self.addClassName("navigation-arrow");
-          self.setAttribute("src", "../material/arrow-left.svg");
-          self.setAttribute("alt", "");
-        });
-        self.appendElement("div", (self) => {
-          self.addClassName("navigation-number");
-          self.appendTextNode((number - 1).toString());
+      self.appendElement("div", (self) => {
+        self.addClassName("navigation-link-container");
+        self.appendElement("a", (self) => {
+          self.addClassName("navigation-link");
+          self.setAttribute("href", (number - 1).toString() + ".html");
+          self.appendElement("img", (self) => {
+            self.addClassName("navigation-arrow");
+            self.setAttribute("src", "../material/arrow-left.svg");
+            self.setAttribute("alt", "");
+          });
+          self.appendElement("div", (self) => {
+            self.addClassName("navigation-number");
+            self.appendTextNode((number - 1).toString());
+          });
         });
       });
       self.appendElement("div", (self) => {
@@ -97,17 +100,20 @@ manager.registerElementRule("title", "page", (transformer, document, element) =>
           self.setAttribute("alt", "");
         });
       });
-      self.appendElement("a", (self) => {
-        self.addClassName("navigation-link");
-        self.appendElement("div", (self) => {
-          self.addClassName("navigation-number");
-          self.appendTextNode((number + 1).toString());
-        });
-        self.setAttribute("href", (number + 1).toString() + ".html");
-        self.appendElement("img", (self) => {
-          self.addClassName("navigation-arrow");
-          self.setAttribute("src", "../material/arrow-right.svg");
-          self.setAttribute("alt", "");
+      self.appendElement("div", (self) => {
+        self.addClassName("navigation-link-container");
+        self.appendElement("a", (self) => {
+          self.addClassName("navigation-link");
+          self.appendElement("div", (self) => {
+            self.addClassName("navigation-number");
+            self.appendTextNode((number + 1).toString());
+          });
+          self.setAttribute("href", (number + 1).toString() + ".html");
+          self.appendElement("img", (self) => {
+            self.addClassName("navigation-arrow");
+            self.setAttribute("src", "../material/arrow-right.svg");
+            self.setAttribute("alt", "");
+          });
         });
       });
     });

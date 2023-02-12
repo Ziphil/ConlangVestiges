@@ -87,21 +87,25 @@
   display: flex;
 }
 
-.navigation-link {
-  column-gap: 12px;
-  font-size: 175%;
-  color: $primary-color;
+.navigation-link-container {
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
-  align-items: center;
-  opacity: 0.5;
   &:first-child {
     justify-content: flex-end;
   }
   &:last-child {
     justify-content: flex-start;
   }
+}
+
+.navigation-link {
+  column-gap: 12px;
+  font-size: 175%;
+  color: $primary-color;
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
   &:hover {
     opacity: 0.8;
   }
