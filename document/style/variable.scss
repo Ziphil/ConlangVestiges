@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@use "sass:math" as *;
+
 
 $text-color: hsl(0, 0, 10%);
 $primary-color: hsl(240, 35%, 30%);
@@ -17,14 +19,14 @@ $main-smartphone-horizontal-padding: 24rpx;
   &::before {
     width: 0rpx;
     height: 0rpx;
-    margin-block-start: - line-intrusion($line-height);
+    margin-block-start: div($line-height - 1, 2) * -1em;
     display: block;
     content: "";
   }
   &::after {
     width: 0rpx;
     height: 0rpx;
-    margin-block-end: - line-intrusion($line-height);
+    margin-block-end: div($line-height - 1, 2) * -1em;
     display: block;
     content: "";
   }

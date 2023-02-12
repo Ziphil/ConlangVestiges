@@ -159,7 +159,7 @@ manager.registerElementRule("comment", "description", (transformer, document, el
     });
     self.appendElement("div", (self) => {
       self.addClassName("comment-main");
-      self.appendChild(transformer.apply(element, "description"));
+      self.appendChild(transformer.apply(element));
     });
   });
   return self;
@@ -169,7 +169,34 @@ manager.registerElementRule("p", "description", (transformer, document, element)
   const self = document.createDocumentFragment();
   self.appendElement("p", (self) => {
     self.addClassName("comment-paragraph");
-    self.appendChild(transformer.apply(element, "description"));
+    self.appendChild(transformer.apply(element));
+  });
+  return self;
+});
+
+manager.registerElementRule("information", "description", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("section", (self) => {
+    self.addClassName("information");
+    self.appendChild(transformer.apply(element));
+  });
+  return self;
+});
+
+manager.registerElementRule("exhibitor", "description", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("div", (self) => {
+    self.addClassName("information-exhibitor");
+    self.appendChild(transformer.apply(element));
+  });
+  return self;
+});
+
+manager.registerElementRule("date", "description", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("div", (self) => {
+    self.addClassName("information-date");
+    self.appendChild(transformer.apply(element));
   });
   return self;
 });

@@ -170,11 +170,26 @@
 
 .comment-main {
   margin-block-start: 32px;
-  row-gap: 8px;
+  row-gap: 24px;
   display: flex;
   flex-direction: column;
 }
 
 .comment-paragraph {
   @include line-height(1.8);
+}
+
+.information {
+  @include line-height(1.8);
+  margin-block-start: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.information-exhibitor {
+  &::before {
+    margin-inline-end: 0.5em;
+    content: "⸺"
+  }
 }
