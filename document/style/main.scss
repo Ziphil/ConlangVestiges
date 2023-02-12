@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0rpx;
+  padding: 0rpx;
+  font-family: "EB Garamond", "Shippori Mincho B1", serif;;
+  font-weight: normal;
+  font-feature-settings: "palt" 1, "pkna" 1;
+  line-height: 1;
+  text-decoration-skip-ink: none;
+  overflow-x: auto;
+  overflow-y: scroll;
+}

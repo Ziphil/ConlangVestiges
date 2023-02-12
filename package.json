@@ -1,0 +1,76 @@
+{
+  "name": "conlang-archive",
+  "version": "0.0.0",
+  "author": "Ziphil",
+  "description": "",
+  "homepage": "https://github.com/Ziphil/ConlangArchive",
+  "main": "dist/index.js",
+  "scripts": {
+    "develop": "webpack --config webpack-main.ts --watch",
+    "build": "webpack --config webpack-main.ts",
+    "start": "node dist/index.js",
+    "lint": "eslint --ext .ts generator template document",
+    "lint:fix": "eslint --fix --ext .ts generator template document"
+  },
+  "eslintConfig": {
+    "extends": "ziphil",
+    "ignorePatterns": "webpack-*.ts",
+    "rules": {
+      "@typescript-eslint/quotes": "off",
+      "no-useless-concat": "off",
+      "prefer-const": [
+        "warn",
+        {
+          "destructuring": "all"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/command-line-args": "^5.2.0",
+    "@types/css-tree": "^1.0.7",
+    "@types/dot": "^1.1.5",
+    "@types/glob": "^7.2.0",
+    "@types/jquery": "^3.5.13",
+    "@types/parsimmon": "^1.10.6",
+    "@types/sass": "^1.43.1",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-node-externals": "^2.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
+    "eslint-config-ziphil": "^1.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.3.2",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "raw-loader": "^4.0.2",
+    "source-map-loader": "^3.0.1",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.3.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "@typescript/lib-dom": "npm:@zenml/xmldom-type",
+    "@zenml/xmldom": "^1.0.0",
+    "@zenml/zenml": "^1.2.0",
+    "@zenml/zotica": "^1.0.0",
+    "basic-ftp": "^4.6.6",
+    "chalk": "^4.1.2",
+    "chokidar": "^3.5.2",
+    "command-line-args": "^5.2.0",
+    "css-tree": "^2.0.4",
+    "dot": "^1.1.3",
+    "glob": "^7.2.0",
+    "glob-promise": "^4.2.2",
+    "parsimmon": "^1.18.1",
+    "sass": "^1.48.0",
+    "source-map-support": "^0.5.21",
+    "webpack": "^5.66.0"
+  }
+}

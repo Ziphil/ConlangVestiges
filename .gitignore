@@ -1,0 +1,11 @@
+node_modules
+dist
+out
+coverage
+log
+config/config.json
+*.code-workspace
+*.env
+.vscode
+desktop.ini
+Thumbs.db
