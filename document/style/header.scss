@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+
+
+.header {
+  width: 100%;
+  padding-block-start: 24px;
+  padding-block-end: 40px;
+  padding-inline: 24px;
+  color: hsl(60, 93%, 84%);
+  background-color: hsl(0, 63%, 23%);
+  border-bottom: solid hsl(60, 93%, 84%) 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.header-title {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+$header-number-size: 96px;
+
+.header-number {
+  width: $header-number-size;
+  height: div($header-number-size, 2);
+  inset-block-end: - div($header-number-size, 2);
+  border-end-start-radius: div($header-number-size, 2);
+  border-end-end-radius: div($header-number-size, 2);
+  font-size: 400%;
+  background-color: hsl(0, 63%, 23%);
+  border: solid hsl(60, 93%, 84%) 2px;
+  border-top: none;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+}
+
+.header-number-inner {
+  margin-block-start: - div($header-number-size, 2);
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
