@@ -3,11 +3,6 @@
 @use "sass:math" as *;
 
 
-$wine-color: hsl(241, 36%, 30%);
-$dark-wine-color: hsl(241, 36%, 20%);
-$gold-color: hsl(55, 70%, 75%);
-$black-color: hsl(0, 0%, 10%);
-
 .section {
   width: 100%;
   padding-inline: $main-horizontal-padding;
@@ -29,8 +24,8 @@ $black-color: hsl(0, 0%, 10%);
   padding-block-start: 32px;
   padding-block-end: 32px;
   padding-inline: 64px;
-  color: $gold-color;
-  background: linear-gradient(to right, $dark-wine-color, $wine-color, $dark-wine-color);
+  color: $secondary-color;
+  background: linear-gradient(to right, $dark-primary-color, $primary-color, $dark-primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,7 +51,7 @@ $black-color: hsl(0, 0%, 10%);
 
 .title {
   column-gap: 24px;
-  color: $wine-color;
+  color: $primary-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +90,7 @@ $black-color: hsl(0, 0%, 10%);
 .navigation-link {
   column-gap: 12px;
   font-size: 175%;
-  color: $wine-color;
+  color: $primary-color;
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
@@ -131,7 +126,7 @@ $black-color: hsl(0, 0%, 10%);
 
 .exhibit {
   aspect-ratio: 6 / 7;
-  border: solid $wine-color 24px;
+  border: solid $primary-color 24px;
   @include smartphone {
     border-width: 12px;
   }
@@ -140,7 +135,7 @@ $black-color: hsl(0, 0%, 10%);
 .exhibit-inner {
   width: 100%;
   height: 100%;
-  border: solid $gold-color 2px;
+  border: solid $secondary-color 2px;
 }
 
 .exhibit-iframe {
@@ -161,9 +156,9 @@ $black-color: hsl(0, 0%, 10%);
 .comment-heading {
   font-size: 150%;
   font-weight: bold;
-  color: $wine-color;
+  color: $primary-color;
   letter-spacing: 0.05em;
-  background: linear-gradient(to bottom, transparent 60%, $gold-color 60%);
+  background: linear-gradient(to bottom, transparent 60%, $secondary-color 60%);
   align-self: flex-start;
 }
 

@@ -12,7 +12,7 @@ html {
 body {
   padding-block-end: 80px;
   color: $text-color;
-  background-color: hsl(55, 100%, 97%);
+  background-color: $background-color;
   font-family: "EB Garamond", "Shippori Mincho B1", serif;;
   font-weight: normal;
   font-feature-settings: "palt" 1, "pkna" 1;
