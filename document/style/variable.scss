@@ -5,3 +5,22 @@ $text-color: hsl(0, 0, 10%);
 
 $main-width: 1200px;
 $main-horizontal-padding: 64px;
+
+
+@mixin line-height($line-height: $line-height) {
+  line-height: $line-height;
+  &::before {
+    width: 0rpx;
+    height: 0rpx;
+    margin-block-start: - line-intrusion($line-height);
+    display: block;
+    content: "";
+  }
+  &::after {
+    width: 0rpx;
+    height: 0rpx;
+    margin-block-end: - line-intrusion($line-height);
+    display: block;
+    content: "";
+  }
+}

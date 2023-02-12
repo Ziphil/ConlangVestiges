@@ -110,7 +110,7 @@ $header-number-size: 96px;
 }
 
 .section-exhibit {
-  margin-block-start: 80px;
+  margin-block-start: 48px;
 }
 
 .exhibit {
@@ -128,4 +128,28 @@ $header-number-size: 96px;
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.section-description {
+  margin-block-start: 60px;
+}
+
+.comment {
+}
+
+.comment-heading {
+  font-size: 150%;
+  font-weight: bold;
+  color: $wine-color;
+}
+
+.comment-main {
+  margin-block-start: 16px;
+  row-gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-paragraph {
+  @include line-height(1.5);
 }

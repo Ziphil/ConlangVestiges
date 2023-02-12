@@ -96,4 +96,38 @@ manager.registerElementRule("exhibit-webpage", "page", (transformer, document, e
   return self;
 });
 
+manager.registerElementRule("description", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendSection((sectionSelf, self) => {
+    sectionSelf.addClassName("section-description");
+    self.appendChild(transformer.apply(element, "description"));
+  });
+  return self;
+});
+
+manager.registerElementRule("comment", "description", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("section", (self) => {
+    self.addClassName("comment");
+    self.appendElement("h3", (self) => {
+      self.addClassName("comment-heading");
+      self.appendTextNode("出展者のコメント");
+    });
+    self.appendElement("div", (self) => {
+      self.addClassName("comment-main");
+      self.appendChild(transformer.apply(element, "description"));
+    });
+  });
+  return self;
+});
+
+manager.registerElementRule("p", "description", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("p", (self) => {
+    self.addClassName("comment-paragraph");
+    self.appendChild(transformer.apply(element, "description"));
+  });
+  return self;
+});
+
 export default manager;
