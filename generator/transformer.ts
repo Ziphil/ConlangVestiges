@@ -24,19 +24,13 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, AnyObje
   }
 
   protected stringify(document: AvendiaDocument): string {
-    if (this.variables.mode === "page") {
-      const view = {
-        environments: this.environments,
-        variables: this.variables,
-        document
-      };
-      const output = this.template(view);
-      return output;
-    } else {
-      document.options.includeDeclaration = true;
-      const output = document.toString();
-      return output;
-    }
+    const view = {
+      environments: this.environments,
+      variables: this.variables,
+      document
+    };
+    const output = this.template(view);
+    return output;
   }
 
   protected resetEnvironments(initialEnvironments?: Partial<AnyObject>): void {
