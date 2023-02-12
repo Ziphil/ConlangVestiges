@@ -47,6 +47,7 @@ manager.registerElementRule("main", "page", (transformer, document, element) => 
 
 manager.registerElementRule("title", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
+  const number = transformer.variables.number as number;
   self.appendSection((sectionSelf, self) => {
     sectionSelf.addClassName("section-title");
     self.appendElement("div", (self) => {
@@ -60,7 +61,7 @@ manager.registerElementRule("title", "page", (transformer, document, element) =>
         self.addClassName("title-main");
         self.appendElement("div", (self) => {
           self.addClassName("title-main-number");
-          self.appendTextNode(transformer.variables.number.toString());
+          self.appendTextNode(number.toString());
         });
         self.appendElement("h2", (self) => {
           self.addClassName("title-main-text");
@@ -71,6 +72,43 @@ manager.registerElementRule("title", "page", (transformer, document, element) =>
         self.addClassName("title-ornament");
         self.setAttribute("src", "../material/ornament-right.svg");
         self.setAttribute("alt", "");
+      });
+    });
+    self.appendElement("div", (self) => {
+      self.addClassName("navigation");
+      self.appendElement("a", (self) => {
+        self.addClassName("navigation-link");
+        self.setAttribute("href", (number - 1).toString() + ".html");
+        self.appendElement("img", (self) => {
+          self.addClassName("navigation-arrow");
+          self.setAttribute("src", "../material/arrow-left.svg");
+          self.setAttribute("alt", "");
+        });
+        self.appendElement("div", (self) => {
+          self.addClassName("navigation-number");
+          self.appendTextNode((number - 1).toString());
+        });
+      });
+      self.appendElement("div", (self) => {
+        self.addClassName("navigation-center");
+        self.appendElement("img", (self) => {
+          self.addClassName("navigation-arrow-center");
+          self.setAttribute("src", "../material/arrow-center.svg");
+          self.setAttribute("alt", "");
+        });
+      });
+      self.appendElement("a", (self) => {
+        self.addClassName("navigation-link");
+        self.appendElement("div", (self) => {
+          self.addClassName("navigation-number");
+          self.appendTextNode((number + 1).toString());
+        });
+        self.setAttribute("href", (number + 1).toString() + ".html");
+        self.appendElement("img", (self) => {
+          self.addClassName("navigation-arrow");
+          self.setAttribute("src", "../material/arrow-right.svg");
+          self.setAttribute("alt", "");
+        });
       });
     });
   });
