@@ -3,14 +3,31 @@
 @use "sass:math" as *;
 
 
+$wine-color: hsl(241, 36%, 30%);
+$dark-wine-color: hsl(241, 36%, 20%);
+$gold-color: hsl(55, 70%, 75%);
+$black-color: hsl(0, 0%, 10%);
+
+.section {
+  width: 100%;
+  padding-inline: $main-horizontal-padding;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-inner {
+  width: 100%;
+  max-width: $main-width;
+}
+
 .header {
   width: 100%;
-  padding-block-start: 24px;
-  padding-block-end: 40px;
-  padding-inline: 24px;
-  color: hsl(60, 93%, 84%);
-  background-color: hsl(0, 63%, 23%);
-  border-bottom: solid hsl(60, 93%, 84%) 2px;
+  padding-block-start: 32px;
+  padding-block-end: 32px;
+  padding-inline: 64px;
+  color: $gold-color;
+  background: linear-gradient(to right, $dark-wine-color, $wine-color, $dark-wine-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +42,8 @@
 }
 
 .header-title {
-  font-size: 200%;
+  letter-spacing: 0.2em;
+  font-size: 150%;
   font-weight: bold;
 }
 
@@ -37,9 +55,9 @@ $header-number-size: 96px;
   inset-block-end: - div($header-number-size, 2);
   border-end-start-radius: div($header-number-size, 2);
   border-end-end-radius: div($header-number-size, 2);
-  font-size: 400%;
-  background-color: hsl(0, 63%, 23%);
-  border: solid hsl(60, 93%, 84%) 2px;
+  font-size: 350%;
+  background-color: $wine-color;
+  border: solid $black-color 2px;
   border-top: none;
   display: flex;
   position: absolute;
@@ -52,4 +70,62 @@ $header-number-size: 96px;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
+}
+
+.section-title {
+  margin-block-start: 80px;
+}
+
+.title {
+  padding-inline: $main-horizontal-padding;
+  column-gap: 24px;
+  color: $wine-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-ornament {
+  height: 48px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.title-main {
+  row-gap: 8px;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-main-number {
+  font-size: 150%;
+}
+
+.title-main-text {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.section-exhibit {
+  margin-block-start: 80px;
+}
+
+.exhibit {
+  aspect-ratio: 6 / 7;
+  border: solid $wine-color 24px;
+}
+
+.exhibit-inner {
+  width: 100%;
+  height: 100%;
+  border: solid $gold-color 2px;
+}
+
+.exhibit-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }

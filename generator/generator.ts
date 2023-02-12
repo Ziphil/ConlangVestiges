@@ -101,6 +101,8 @@ export class AvendiaGenerator {
         await this.transformNormalZml(documentPath, outputPath);
       } else if (extension === "scss") {
         await this.transformNormalScss(documentPath, outputPath);
+      } else if (extension === "svg" || extension === "png") {
+        await this.transformNormalImage(documentPath, outputPath);
       }
     });
     await Promise.all(promises);
@@ -135,6 +137,11 @@ export class AvendiaGenerator {
     const outputString = cssTreeUtil.generate(cssTree);
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
     await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
+  }
+
+  private async transformNormalImage(documentPath: string, outputPath: string): Promise<void> {
+    await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
+    await fs.copyFile(documentPath, outputPath);
   }
 
   private printNormal(documentPath: string, intervals: {convert: number, upload: number}, succeed: boolean): void {
@@ -208,7 +215,7 @@ export class AvendiaGenerator {
   }
 
   private checkValidDocumentPath(documentPath: string): boolean {
-    return pathUtil.basename(documentPath).match(/^(index|main|\d+)\.(\w+)$/) !== null;
+    return documentPath.match(/material\//) !== null || pathUtil.basename(documentPath).match(/^(index|\d+)\.(\w+)$/) !== null;
   }
 
 }
