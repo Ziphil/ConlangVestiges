@@ -77,7 +77,6 @@ $header-number-size: 96px;
 }
 
 .title {
-  padding-inline: $main-horizontal-padding;
   column-gap: 24px;
   color: $wine-color;
   display: flex;
@@ -144,12 +143,12 @@ $header-number-size: 96px;
 }
 
 .comment-main {
-  margin-block-start: 16px;
-  row-gap: 16px;
+  margin-block-start: 24px;
+  row-gap: 8px;
   display: flex;
   flex-direction: column;
 }
 
 .comment-paragraph {
-  @include line-height(1.5);
+  @include line-height(1.8);
 }
