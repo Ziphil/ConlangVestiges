@@ -22,7 +22,7 @@ manager.registerElementRule("header", "page", (transformer, document, element) =
   self.appendElement("header", (self) => {
     self.addClassName("header");
     self.appendElement("div", (self) => {
-      self.addClassName("header-main");
+      self.addClassName("header-inner");
       self.appendElement("div", (self) => {
         self.addClassName("header-left");
       });
@@ -221,6 +221,35 @@ manager.registerElementRule("footer", "page", (transformer, document, element) =
   self.appendSection("section", (sectionSelf, self) => {
     sectionSelf.addClassName("section-navigation");
     self.appendChild(transformer.call("navigation"));
+  });
+  self.appendElement("footer", (self) => {
+    self.addClassName("footer");
+    self.appendElement("footer", (self) => {
+      self.addClassName("footer-inner");
+      self.appendElement("div", (self) => {
+        self.addClassName("footer-left");
+        self.appendTextNode("言語創造の痕跡展");
+      });
+      self.appendElement("div", (self) => {
+        self.addClassName("footer-right");
+        self.appendElement("div", (self) => {
+          self.appendTextNode("View on ");
+          self.appendElement("a", (self) => {
+            self.setAttribute("href", "https://github.com/Ziphil/ConlangArchive");
+            self.setAttribute("target", "_blank");
+            self.appendTextNode("GitHub");
+          });
+        });
+        self.appendElement("div", (self) => {
+          self.appendTextNode("The ornament images are designed by ");
+          self.appendElement("a", (self) => {
+            self.setAttribute("href", "https://www.freepik.com");
+            self.setAttribute("target", "_blank");
+            self.appendTextNode("rawpixel.com / Freepik");
+          });
+        });
+      });
+    });
   });
   return self;
 });
