@@ -50,8 +50,9 @@ manager.registerElementRule("main", "page", (transformer, document, element) => 
 manager.registerElementRule("title", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const number = transformer.variables.number as number;
-  self.appendSection((sectionSelf, self) => {
+  self.appendSection("section", (sectionSelf, self) => {
     sectionSelf.addClassName("section-title");
+    self.addClassName("section-inner-title");
     self.appendElement("div", (self) => {
       self.addClassName("title");
       self.appendElement("img", (self) => {
@@ -137,7 +138,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
 manager.registerElementRule("exhibit-webpage", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const path = element.getAttribute("src");
-  self.appendSection((sectionSelf, self) => {
+  self.appendSection("section", (sectionSelf, self) => {
     sectionSelf.addClassName("section-exhibit");
     self.appendElement("div", (self) => {
       self.addClassName("exhibit");
@@ -155,8 +156,9 @@ manager.registerElementRule("exhibit-webpage", "page", (transformer, document, e
 
 manager.registerElementRule("description", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  self.appendSection((sectionSelf, self) => {
+  self.appendSection("section", (sectionSelf, self) => {
     sectionSelf.addClassName("section-description");
+    self.addClassName("section-inner-description");
     self.appendChild(transformer.apply(element, "description"));
   });
   return self;
@@ -210,6 +212,15 @@ manager.registerElementRule("date", "description", (transformer, document, eleme
   self.appendElement("div", (self) => {
     self.addClassName("information-date");
     self.appendChild(transformer.apply(element));
+  });
+  return self;
+});
+
+manager.registerElementRule("footer", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendSection("section", (sectionSelf, self) => {
+    sectionSelf.addClassName("section-navigation");
+    self.appendChild(transformer.call("navigation"));
   });
   return self;
 });

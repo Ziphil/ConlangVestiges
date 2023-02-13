@@ -46,8 +46,8 @@ export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocume
 
 export class AvendiaDocumentFragment extends BaseDocumentFragment<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement, AvendiaText> {
 
-  public appendSection(callback?: (sectionSelf: AvendiaElement, self: AvendiaElement) => void): void {
-    this.appendElement("div", (sectionSelf) => {
+  public appendSection(tagName: string, callback?: (sectionSelf: AvendiaElement, self: AvendiaElement) => void): void {
+    this.appendElement(tagName, (sectionSelf) => {
       sectionSelf.addClassName("section");
       sectionSelf.appendElement("div", (self) => {
         self.addClassName("section-inner");
