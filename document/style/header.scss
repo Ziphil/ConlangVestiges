@@ -89,6 +89,7 @@
 
 .navigation-link-container {
   display: flex;
+  flex-basis: 0px;
   flex-grow: 1;
   flex-shrink: 0;
   &:first-child {
@@ -192,4 +193,8 @@
     margin-inline-end: 0.5em;
     content: "⸺"
   }
+}
+
+.information-date {
+  opacity: 0.5;
 }

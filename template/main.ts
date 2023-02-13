@@ -5,6 +5,8 @@ import {
 } from "../generator/transformer";
 
 
+const MAX_PAGE = 17;
+
 const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("page", "", (transformer, document, element) => {
@@ -78,19 +80,21 @@ manager.registerElementRule("title", "page", (transformer, document, element) =>
       self.addClassName("navigation");
       self.appendElement("div", (self) => {
         self.addClassName("navigation-link-container");
-        self.appendElement("a", (self) => {
-          self.addClassName("navigation-link");
-          self.setAttribute("href", (number - 1).toString() + ".html");
-          self.appendElement("img", (self) => {
-            self.addClassName("navigation-arrow");
-            self.setAttribute("src", "../material/arrow-left.svg");
-            self.setAttribute("alt", "");
+        if (number > 1) {
+          self.appendElement("a", (self) => {
+            self.addClassName("navigation-link");
+            self.setAttribute("href", (number - 1).toString() + ".html");
+            self.appendElement("img", (self) => {
+              self.addClassName("navigation-arrow");
+              self.setAttribute("src", "../material/arrow-left.svg");
+              self.setAttribute("alt", "");
+            });
+            self.appendElement("div", (self) => {
+              self.addClassName("navigation-number");
+              self.appendTextNode((number - 1).toString());
+            });
           });
-          self.appendElement("div", (self) => {
-            self.addClassName("navigation-number");
-            self.appendTextNode((number - 1).toString());
-          });
-        });
+        }
       });
       self.appendElement("div", (self) => {
         self.addClassName("navigation-center");
@@ -102,19 +106,21 @@ manager.registerElementRule("title", "page", (transformer, document, element) =>
       });
       self.appendElement("div", (self) => {
         self.addClassName("navigation-link-container");
-        self.appendElement("a", (self) => {
-          self.addClassName("navigation-link");
-          self.appendElement("div", (self) => {
-            self.addClassName("navigation-number");
-            self.appendTextNode((number + 1).toString());
+        if (number < MAX_PAGE) {
+          self.appendElement("a", (self) => {
+            self.addClassName("navigation-link");
+            self.appendElement("div", (self) => {
+              self.addClassName("navigation-number");
+              self.appendTextNode((number + 1).toString());
+            });
+            self.setAttribute("href", (number + 1).toString() + ".html");
+            self.appendElement("img", (self) => {
+              self.addClassName("navigation-arrow");
+              self.setAttribute("src", "../material/arrow-right.svg");
+              self.setAttribute("alt", "");
+            });
           });
-          self.setAttribute("href", (number + 1).toString() + ".html");
-          self.appendElement("img", (self) => {
-            self.addClassName("navigation-arrow");
-            self.setAttribute("src", "../material/arrow-right.svg");
-            self.setAttribute("alt", "");
-          });
-        });
+        }
       });
     });
   });
