@@ -76,52 +76,59 @@ manager.registerElementRule("title", "page", (transformer, document, element) =>
         self.setAttribute("alt", "");
       });
     });
+    self.appendChild(transformer.call("navigation"));
+  });
+  return self;
+});
+
+manager.registerElementFactory("navigation", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const number = transformer.variables.number as number;
+  self.appendElement("div", (self) => {
+    self.addClassName("navigation");
     self.appendElement("div", (self) => {
-      self.addClassName("navigation");
-      self.appendElement("div", (self) => {
-        self.addClassName("navigation-link-container");
-        if (number > 1) {
-          self.appendElement("a", (self) => {
-            self.addClassName("navigation-link");
-            self.setAttribute("href", (number - 1).toString() + ".html");
-            self.appendElement("img", (self) => {
-              self.addClassName("navigation-arrow");
-              self.setAttribute("src", "../material/arrow-left.svg");
-              self.setAttribute("alt", "");
-            });
-            self.appendElement("div", (self) => {
-              self.addClassName("navigation-number");
-              self.appendTextNode((number - 1).toString());
-            });
+      self.addClassName("navigation-link-container");
+      if (number > 1) {
+        self.appendElement("a", (self) => {
+          self.addClassName("navigation-link");
+          self.setAttribute("href", (number - 1).toString() + ".html");
+          self.appendElement("img", (self) => {
+            self.addClassName("navigation-arrow");
+            self.setAttribute("src", "../material/arrow-left.svg");
+            self.setAttribute("alt", "");
           });
-        }
-      });
-      self.appendElement("div", (self) => {
-        self.addClassName("navigation-center");
-        self.appendElement("img", (self) => {
-          self.addClassName("navigation-arrow-center");
-          self.setAttribute("src", "../material/arrow-center.svg");
-          self.setAttribute("alt", "");
+          self.appendElement("div", (self) => {
+            self.addClassName("navigation-number");
+            self.appendTextNode((number - 1).toString());
+          });
         });
+      }
+    });
+    self.appendElement("div", (self) => {
+      self.addClassName("navigation-center");
+      self.appendElement("img", (self) => {
+        self.addClassName("navigation-arrow-center");
+        self.setAttribute("src", "../material/arrow-center.svg");
+        self.setAttribute("alt", "");
       });
-      self.appendElement("div", (self) => {
-        self.addClassName("navigation-link-container");
-        if (number < MAX_PAGE) {
-          self.appendElement("a", (self) => {
-            self.addClassName("navigation-link");
-            self.appendElement("div", (self) => {
-              self.addClassName("navigation-number");
-              self.appendTextNode((number + 1).toString());
-            });
-            self.setAttribute("href", (number + 1).toString() + ".html");
-            self.appendElement("img", (self) => {
-              self.addClassName("navigation-arrow");
-              self.setAttribute("src", "../material/arrow-right.svg");
-              self.setAttribute("alt", "");
-            });
+    });
+    self.appendElement("div", (self) => {
+      self.addClassName("navigation-link-container");
+      if (number < MAX_PAGE) {
+        self.appendElement("a", (self) => {
+          self.addClassName("navigation-link");
+          self.appendElement("div", (self) => {
+            self.addClassName("navigation-number");
+            self.appendTextNode((number + 1).toString());
           });
-        }
-      });
+          self.setAttribute("href", (number + 1).toString() + ".html");
+          self.appendElement("img", (self) => {
+            self.addClassName("navigation-arrow");
+            self.setAttribute("src", "../material/arrow-right.svg");
+            self.setAttribute("alt", "");
+          });
+        });
+      }
     });
   });
   return self;
