@@ -235,14 +235,16 @@ manager.registerElementRule("footer", "page", (transformer, document, element) =
         self.appendElement("div", (self) => {
           self.appendTextNode("View on ");
           self.appendElement("a", (self) => {
+            self.addClassName("footer-link");
             self.setAttribute("href", "https://github.com/Ziphil/ConlangArchive");
             self.setAttribute("target", "_blank");
             self.appendTextNode("GitHub");
           });
         });
         self.appendElement("div", (self) => {
-          self.appendTextNode("The ornament images are designed by ");
+          self.appendTextNode("Ornament images by ");
           self.appendElement("a", (self) => {
+            self.addClassName("footer-link");
             self.setAttribute("href", "https://www.freepik.com");
             self.setAttribute("target", "_blank");
             self.appendTextNode("rawpixel.com / Freepik");
