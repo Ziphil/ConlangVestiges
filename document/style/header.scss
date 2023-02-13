@@ -51,7 +51,7 @@
 }
 
 .section-inner-title {
-  row-gap: 24px;
+  row-gap: 32px;
   display: flex;
   flex-direction: column;
 }
@@ -107,14 +107,19 @@
 }
 
 .navigation-link {
+  padding-inline: 8px;
   column-gap: 12px;
   font-size: 175%;
-  color: $primary-color;
+  color: $secondary-color;
+  background: linear-gradient(to bottom, transparent 0%, $accent-color 0%);
+  background-size: 100% 20%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  opacity: 0.5;
+  transition: background-size linear 0.25s;
   &:hover {
-    opacity: 0.8;
+    background-size: 100% 100%;
   }
 }
 
