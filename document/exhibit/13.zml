@@ -1,0 +1,57 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page|number="13"|<
+
+  \header;
+  \title<言語名なし>
+
+  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+
+  \description<
+    \comment<
+      \p<
+        僕が人工言語というものを知ったばかりの頃、世界一簡単な言語を目指して作ろうとした。
+        特徴的なのは構造が括弧のように明示され、それが他の機能語と一体になるところだろう。
+        ちなみに実際に使用してみたら余りにも使いずら過ぎたから没になったという記憶がある。
+      >
+      \p<
+        おそらく以下のような文法だと思われる。
+      >
+      \p<
+        格と動詞の標識 5 つ。
+        a: ～が\br;
+        e: ～へ\br;
+        i: ～する,～だ\br;
+        o: ～を\br;
+        u: ～から,～で,～と\br;
+        これらは内容語に前置される。\br;
+        a A i B. → A が B する。
+      >
+      \p<
+        -n- で入れ子構造にできる。\br;
+        ena A i B e C u D. → D から C へ B する A へ
+      >
+      \p<
+        -n で修飾ができる。\br;
+        A en B. → B への A。
+        E enan A i B e C u D. → D から C へ B する A への E。
+      >
+      \p<
+        n- で入れ子から抜けれる。\br;
+        ona A i B na C i D. → B する A を C が D する。\br;
+        ano A ona B i C e D ni E no F i G. → D に C する B を E する A が F を G する。
+      >
+      \p<
+        見ての通り (V)(n)V(n) 以外にも機能語ががあったようだがよく分からない。
+        おそらく「mi li ha li telo」は「私は水を持つ」という意味だが、「l-」が具体的にどのような意味なのか分からない。
+      >
+    >
+    \information<
+      \exhibitor<`/naf>
+      \date<2023`/02`/04>
+    >
+  >
+
+>

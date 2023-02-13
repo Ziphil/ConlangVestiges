@@ -1,0 +1,24 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page|number="7"|<
+
+  \header;
+  \title<言語名なし>
+
+  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+
+  \description<
+    \comment<
+      \p<
+        実験的に Twitter に淡々と未公開の人工言語で投稿してみようかと思ったが、当たり障りのない日常をツイートを継続的に捏造するのは予想以上に難しく、言語製作の方ではなくそちらで挫折してしまった言語です。
+      >
+    >
+    \information<
+      \exhibitor<Rhemestry>
+      \date<2023`/02`/01>
+    >
+  >
+
+>

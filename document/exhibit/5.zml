@@ -1,0 +1,26 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page|number="5"|<
+
+  \header;
+  \title<エープリースタ語>
+
+  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+
+  \description<
+    \comment<
+      \p<
+        エープリースタ語は創作世界観「大宇宙」のディアスポラ種族「ロマプルス (またはエープリーストゥ・イステーラヴ)」の言語です。
+        Github Desktop でバックアップを取っていましたが、直接リポジトリのフォルダを弄ったら、なにもしてないのに (辞書が) こわれた (愚か)。
+        皆さんはバックアップを取っていても、油断しないようにしましょうね?
+      >
+    >
+    \information<
+      \exhibitor<Fafs F. Sashimi>
+      \date<2023`/02`/01>
+    >
+  >
+
+>
