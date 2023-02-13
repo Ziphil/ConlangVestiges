@@ -65,9 +65,18 @@
 }
 
 .title-ornament {
+  width: 31.94478px * 2.5;
   height: 18.83958px * 2.5;
+  background-repeat: no-repeat;
+  background-size: cover;
   flex-grow: 0;
   flex-shrink: 0;
+  &[data-position="left"] {
+    background-image: url("../material/ornament-left.svg");    
+  } 
+  &[data-position="right"] {
+    background-image: url("../material/ornament-right.svg");    
+  } 
 }
 
 .title-main {
@@ -112,7 +121,7 @@
   font-size: 175%;
   color: $secondary-color;
   background: linear-gradient(to bottom, transparent 0%, $accent-color 0%);
-  background-size: 100% 20%;
+  background-size: 100% 30%;
   background-position: left bottom;
   background-repeat: no-repeat;
   display: flex;
@@ -129,11 +138,24 @@
 }
 
 .navigation-arrow {
+  width: 10.87790px * 2.5;
   height: 12.12340px * 2.5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &[data-position="left"] {
+    background-image: url("../material/arrow-left.svg");    
+  } 
+  &[data-position="right"] {
+    background-image: url("../material/arrow-right.svg");    
+  }
 }
 
-.navigation-arrow-center {
+.dot {
+  width: 3.12208px * 2.5;
   height: 3.11926px * 2.5;
+  background-image: url("../material/dot.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section-exhibit {
