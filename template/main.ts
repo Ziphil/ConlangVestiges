@@ -150,6 +150,13 @@ manager.registerElementRule("exhibit-webpage", "page", (transformer, document, e
 
 manager.registerElementRule("description", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
+  self.appendSection("div", (sectionSelf, self) => {
+    sectionSelf.addClassName("section-separator");
+    self.addClassName("section-inner-separator");
+    self.appendElement("div", (self) => {
+      self.addClassName("dot");
+    });
+  });
   self.appendSection("section", (sectionSelf, self) => {
     sectionSelf.addClassName("section-description");
     self.addClassName("section-inner-description");
@@ -222,7 +229,20 @@ manager.registerElementRule("footer", "page", (transformer, document, element) =
       self.addClassName("footer-inner");
       self.appendElement("div", (self) => {
         self.addClassName("footer-left");
-        self.appendTextNode("言語創造の痕跡展");
+        self.appendElement("div", (self) => {
+          self.addClassName("footer-title");
+          self.appendTextNode("言語創造の痕跡展");
+        });
+        self.appendElement("div", (self) => {
+          self.addClassName("footer-organizer");
+          self.appendTextNode("Organized by ");
+          self.appendElement("a", (self) => {
+            self.addClassName("footer-link");
+            self.setAttribute("href", "https://ziphil.com");
+            self.setAttribute("target", "_blank");
+            self.appendTextNode("Ziphil");
+          });
+        });
       });
       self.appendElement("div", (self) => {
         self.addClassName("footer-right");
