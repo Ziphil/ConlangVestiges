@@ -99,7 +99,7 @@
 
   \section|class="section section-request"|<
     \div|class="section-inner"|<
-      \h2|class="request-heading"|<出展言語募集中>
+      \h2|class="request-heading"|<展示言語募集中>
       \div|class="request-main"|<
         \div|class="content"|<
           \p|class="paragraph"|<
@@ -110,7 +110,7 @@
           \a|class="request-button",href="https://forms.gle/CAwkSo26kUdQDihq9",target="_blank"|<出展フォーム>
           \ul<
             \li<
-              展示の際に、画像資料をトリミングしたり、テキスト資料の一部分をカットしたりする場合があります。
+              展示スペースの都合上、画像資料をトリミングしたり、テキスト資料の一部分をカットしたりする場合があります。
               どうしてもそのまま展示してほしい場合はその旨をお伝えください。
             >
             \li<

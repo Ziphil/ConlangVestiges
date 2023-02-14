@@ -148,18 +148,6 @@ manager.registerElementRule("description", "page", (transformer, document, eleme
   return self;
 });
 
-manager.registerElementFactory("dot", (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendSection("div", (sectionSelf, self) => {
-    sectionSelf.addClassName("section-dot");
-    self.addClassName("section-inner-dot");
-    self.appendElement("div", (self) => {
-      self.addClassName("dot");
-    });
-  });
-  return self;
-});
-
 manager.registerElementRule("comment", "description", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("section", (self) => {
@@ -172,15 +160,6 @@ manager.registerElementRule("comment", "description", (transformer, document, el
       self.addClassName("content");
       self.appendChild(transformer.apply(element));
     });
-  });
-  return self;
-});
-
-manager.registerElementRule("p", true, (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendElement("p", (self) => {
-    self.addClassName("paragraph");
-    self.appendChild(transformer.apply(element));
   });
   return self;
 });
@@ -208,61 +187,6 @@ manager.registerElementRule("date", "description", (transformer, document, eleme
   self.appendElement("div", (self) => {
     self.addClassName("information-date");
     self.appendChild(transformer.apply(element));
-  });
-  return self;
-});
-
-manager.registerElementRule("footer", ["page", "top"], (transformer, document, element, scope) => {
-  const self = document.createDocumentFragment();
-  if (scope === "page") {
-    self.appendSection("section", (sectionSelf, self) => {
-      sectionSelf.addClassName("section-navigation");
-      self.appendChild(transformer.call("navigation"));
-    });
-  }
-  self.appendElement("footer", (self) => {
-    self.addClassName("footer");
-    self.appendElement("div", (self) => {
-      self.addClassName("footer-inner");
-      self.appendElement("div", (self) => {
-        self.addClassName("footer-left");
-        self.appendElement("div", (self) => {
-          self.addClassName("footer-title");
-          self.appendTextNode("言語創造の痕跡展");
-        });
-        self.appendElement("div", (self) => {
-          self.addClassName("footer-organizer");
-          self.appendTextNode("Organized by ");
-          self.appendElement("a", (self) => {
-            self.addClassName("footer-link");
-            self.setAttribute("href", "https://ziphil.com");
-            self.setAttribute("target", "_blank");
-            self.appendTextNode("Ziphil");
-          });
-        });
-      });
-      self.appendElement("div", (self) => {
-        self.addClassName("footer-right");
-        self.appendElement("div", (self) => {
-          self.appendTextNode("View on ");
-          self.appendElement("a", (self) => {
-            self.addClassName("footer-link");
-            self.setAttribute("href", "https://github.com/Ziphil/ConlangArchive");
-            self.setAttribute("target", "_blank");
-            self.appendTextNode("GitHub");
-          });
-        });
-        self.appendElement("div", (self) => {
-          self.appendTextNode("Ornament images by ");
-          self.appendElement("a", (self) => {
-            self.addClassName("footer-link");
-            self.setAttribute("href", "https://www.freepik.com");
-            self.setAttribute("target", "_blank");
-            self.appendTextNode("rawpixel.com / Freepik");
-          });
-        });
-      });
-    });
   });
   return self;
 });

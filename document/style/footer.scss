@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+
+
+.footer {
+  width: 100%;
+  margin-block-start: 128px;
+  padding-inline: $main-horizontal-padding;
+  display: flex;
+  flex-direction: column;
+  @include smartphone {
+    padding-inline: $main-smartphone-horizontal-padding;
+  }
+}
+
+.footer-inner {
+  padding-block-start: 32px;
+  padding-block-end: 32px;
+  border-block-start: solid rgba($primary-color, 0.5) 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-left {
+  row-gap: 8px;
+  color: $primary-color;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: 125%;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.footer-organizer {
+  font-size: 90%;
+}
+
+.footer-right {
+  row-gap: 6px;
+  font-size: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.footer-link {
+  color: $secondary-color;
+  text-decoration: underline;
+}

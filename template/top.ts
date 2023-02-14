@@ -16,9 +16,9 @@ manager.registerElementRule("top", "", (transformer, document, element) => {
 manager.registerElementRule("list", "top", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendSection("section", (sectionSelf, self) => {
-    sectionSelf.addClassName("section-list");
+    sectionSelf.addClassName("section-table");
     self.appendElement("ul", (self) => {
-      self.addClassName("list");
+      self.addClassName("table");
       self.appendChild(transformer.apply(element));
     });
   });
@@ -29,14 +29,14 @@ manager.registerElementRule("item", "top", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const number = +element.getAttribute("number");
   self.appendElement("li", (self) => {
-    self.addClassName("list-item");
+    self.addClassName("table-item");
     self.appendElement("a", (self) => {
-      self.addClassName("list-item-inner");
+      self.addClassName("table-item-inner");
       self.setAttribute("href", `exhibit/${number}.html`);
       self.appendElement("div", (self) => {
-        self.addClassName("list-main");
+        self.addClassName("table-main");
         self.appendElement("div", (self) => {
-          self.addClassName("list-number");
+          self.addClassName("table-number");
           self.appendTextNode(number.toString());
         });
         self.appendChild(transformer.apply(element, "item"));
@@ -49,7 +49,7 @@ manager.registerElementRule("item", "top", (transformer, document, element) => {
 manager.registerElementRule("title", "item", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("h2", (self) => {
-    self.addClassName("list-title");
+    self.addClassName("table-title");
     self.appendChild(transformer.apply(element));
   });
   return self;
@@ -58,26 +58,8 @@ manager.registerElementRule("title", "item", (transformer, document, element) =>
 manager.registerElementRule("exhibitor", "item", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
-    self.addClassName("list-exhibitor");
+    self.addClassName("table-exhibitor");
     self.appendChild(transformer.apply(element));
-  });
-  return self;
-});
-
-manager.registerElementRule("separator", "top", (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendChild(transformer.call("separator", element));
-  return self;
-});
-
-manager.registerElementFactory("separator", (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendSection("div", (sectionSelf, self) => {
-    sectionSelf.addClassName("section-separator");
-    self.addClassName("section-inner-separator");
-    self.appendElement("div", (self) => {
-      self.addClassName("dot");
-    });
   });
   return self;
 });
