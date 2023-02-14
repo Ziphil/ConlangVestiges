@@ -36,12 +36,19 @@
 }
 
 .list-item {
-  padding-inline-start: 1.5em;
+  padding-inline-start: calc(#{3.12208px * 2} + 0.5em);
   &::before {
-    margin-inline-start: -1.5em;
-    width: 1.5em;
+    margin-inline-start: calc(#{3.12208px * -2} - 0.5em);
+    margin-inline-end: 0.5em;
+    width: 3.12208px * 2;
+    height: 3.11926px * 2;
+    inset-block-end: 2px;
+    background-image: url("../material/dot.svg");
+    background-repeat: no-repeat;
+    background-size: cover;  
     display: inline-block;
-    content: "※";
+    position: relative;
+    content: "";
   }
 }
 
