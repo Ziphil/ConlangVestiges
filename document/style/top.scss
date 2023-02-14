@@ -1,3 +1,58 @@
 @charset "utf-8";
 
 @use "sass:math" as *;
+
+
+.top {
+  width: 100%;
+  padding-block-start: 320px;
+  padding-block-end: 64px;
+  padding-inline: $main-horizontal-padding;
+  background: linear-gradient(to right, $dark-primary-color, $primary-color, $dark-primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include smartphone {
+    padding-inline: $main-smartphone-horizontal-padding;
+  }
+}
+
+.top-inner {
+  width: 100%;
+  max-width: $main-width;
+}
+
+.top-title {
+  row-gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-title-japanese {
+  @include line-height(1.2);
+  font-size: 500%;
+  font-weight: bold;  
+  color: $accent-color;
+  letter-spacing: 0.2em;
+}
+
+.top-title-latin {
+  @include line-height(1.2);
+  padding-inline-start: 4px;
+  font-size: 250%;
+  color: rgba($accent-color, 0.5);
+  letter-spacing: 0.25em;
+}
+
+.top-description {
+  margin-block-start: 64px;
+  row-gap: 24px;
+  font-size: 125%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-paragraph {
+  @include line-height(1.8);
+}

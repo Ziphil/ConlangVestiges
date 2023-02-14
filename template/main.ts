@@ -225,7 +225,7 @@ manager.registerElementRule("footer", "page", (transformer, document, element) =
   });
   self.appendElement("footer", (self) => {
     self.addClassName("footer");
-    self.appendElement("footer", (self) => {
+    self.appendElement("div", (self) => {
       self.addClassName("footer-inner");
       self.appendElement("div", (self) => {
         self.addClassName("footer-left");

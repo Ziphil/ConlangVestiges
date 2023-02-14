@@ -109,9 +109,10 @@ export class AvendiaGenerator {
   }
 
   private async transformNormalZml(documentPath: string, outputPath: string): Promise<void> {
+    const initialVariables = {path: documentPath};
     const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
     const inputDocument = this.parser.tryParse(inputString);
-    const outputString = this.transformer.transformStringify(inputDocument, {initialVariables: {}});
+    const outputString = this.transformer.transformStringify(inputDocument, {initialVariables});
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
     await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
   }
@@ -187,7 +188,8 @@ export class AvendiaGenerator {
   }
 
   private createTransformer(): AvendiaTransformer {
-    const options = {initialEnvironments: {}};
+    const initialEnvironments = {};
+    const options = {initialEnvironments};
     const transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false, html: true}), options);
     for (const manager of templateManagers) {
       transformer.regsiterTemplateManager(manager);
