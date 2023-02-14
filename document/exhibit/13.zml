@@ -21,31 +21,43 @@
       >
       \p<
         格と動詞の標識 5 つ。
-        a: ～が\br;
-        e: ～へ\br;
-        i: ～する,～だ\br;
-        o: ～を\br;
-        u: ～から,～で,～と\br;
-        これらは内容語に前置される。\br;
-        a A i B. → A が B する。
+      >
+      \ul<
+        \li<a\dash<―>～が>
+        \li<e\dash<―>～へ>
+        \li<i\dash<―>～する, ～だ>
+        \li<o\dash<―>～を>
+        \li<u\dash<―>～から, ～で, ～と>
       >
       \p<
-        -n- で入れ子構造にできる。\br;
-        ena A i B e C u D. → D から C へ B する A へ
+        これらは内容語に前置される。
+      >
+      \ul<
+        \li<a A i B.\dash<→>A が B する。>
       >
       \p<
-        -n で修飾ができる。\br;
-        A en B. → B への A。
-        E enan A i B e C u D. → D から C へ B する A への E。
+        -n- で入れ子構造にできる。
+      >
+      \ul<
+        \li<ena A i B e C u D.\dash<→>D から C へ B する A へ。>
       >
       \p<
-        n- で入れ子から抜けれる。\br;
-        ona A i B na C i D. → B する A を C が D する。\br;
-        ano A ona B i C e D ni E no F i G. → D に C する B を E する A が F を G する。
+        -n で修飾ができる。
+      >
+      \ul<
+        \li<A en B.\dash<→>B への A。>
+        \li<E enan A i B e C u D.\dash<→>D から C へ B する A への E。>
       >
       \p<
-        見ての通り (V)(n)V(n) 以外にも機能語ががあったようだがよく分からない。
-        おそらく「mi li ha li telo」は「私は水を持つ」という意味だが、「l-」が具体的にどのような意味なのか分からない。
+        n- で入れ子から抜けれる。
+      >
+      \ul<
+        \li<ona A i B na C i D.\dash<→>B する A を C が D する。>
+        \li<ano A ona B i C e D ni E no F i G.\dash<→>D に C する B を E する A が F を G する。>
+      >
+      \p<
+        見ての通り (V)(n)V(n) 以外にも機能語があったようだがよく分からない。
+        おそらく「mi li ha li telo」は「私は水を持つ」という意味だが、l- が具体的にどのような意味なのか分からない。
       >
     >
     \information<

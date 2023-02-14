@@ -208,6 +208,7 @@
 .information-exhibitor {
   &::before {
     margin-inline-end: 0.5em;
+    opacity: 0.5;
     content: "⸺"
   }
 }

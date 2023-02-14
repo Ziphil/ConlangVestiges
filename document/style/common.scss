@@ -43,13 +43,22 @@
     width: 3.12208px * 2;
     height: 3.11926px * 2;
     inset-block-end: 2px;
+    opacity: 0.5;
     background-image: url("../material/dot.svg");
     background-repeat: no-repeat;
     background-size: cover;  
     display: inline-block;
     position: relative;
     content: "";
+    .section-description & {
+      background-image: url("../material/dot-white.svg");
+    }
   }
+}
+
+.dash {
+  margin-inline: 0.5em;
+  opacity: 0.5;
 }
 
 .section-dot {

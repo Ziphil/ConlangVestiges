@@ -34,6 +34,15 @@ manager.registerElementRule("li", true, (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule("dash", true, (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("soan", (self) => {
+    self.addClassName("dash");
+    self.appendChild(transformer.apply(element));
+  });
+  return self;
+});
+
 manager.registerElementFactory("dot", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendSection("div", (sectionSelf, self) => {
