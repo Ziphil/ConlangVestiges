@@ -28,7 +28,10 @@ manager.registerElementRule("header", "page", (transformer, document, element) =
       });
       self.appendElement("h1", (self) => {
         self.addClassName("header-title");
-        self.appendTextNode("言語創造の痕跡展");
+        self.appendElement("a", (self) => {
+          self.setAttribute("href", "../index.html");
+          self.appendTextNode("言語創造の痕跡展");
+        });
       });
       self.appendElement("div", (self) => {
         self.addClassName("header-right");
@@ -203,12 +206,14 @@ manager.registerElementRule("date", "description", (transformer, document, eleme
   return self;
 });
 
-manager.registerElementRule("footer", "page", (transformer, document, element) => {
+manager.registerElementRule("footer", ["page", "html"], (transformer, document, element, scope) => {
   const self = document.createDocumentFragment();
-  self.appendSection("section", (sectionSelf, self) => {
-    sectionSelf.addClassName("section-navigation");
-    self.appendChild(transformer.call("navigation"));
-  });
+  if (scope === "page") {
+    self.appendSection("section", (sectionSelf, self) => {
+      sectionSelf.addClassName("section-navigation");
+      self.appendChild(transformer.call("navigation"));
+    });
+  }
   self.appendElement("footer", (self) => {
     self.addClassName("footer");
     self.appendElement("div", (self) => {
