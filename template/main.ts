@@ -56,10 +56,6 @@ manager.registerElementRule("title", "page", (transformer, document, element) =>
     self.appendElement("div", (self) => {
       self.addClassName("title");
       self.appendElement("div", (self) => {
-        self.addClassName("title-ornament");
-        self.setAttribute("data-position", "left");
-      });
-      self.appendElement("div", (self) => {
         self.addClassName("title-main");
         self.appendElement("div", (self) => {
           self.addClassName("title-main-number");
@@ -69,10 +65,6 @@ manager.registerElementRule("title", "page", (transformer, document, element) =>
           self.addClassName("title-main-text");
           self.appendChild(transformer.apply(element));
         });
-      });
-      self.appendElement("div", (self) => {
-        self.addClassName("title-ornament");
-        self.setAttribute("data-position", "right");
       });
     });
     self.appendChild(transformer.call("navigation"));
@@ -91,10 +83,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
         self.appendElement("a", (self) => {
           self.addClassName("navigation-link");
           self.setAttribute("href", (number - 1).toString() + ".html");
-          self.appendElement("div", (self) => {
-            self.addClassName("navigation-arrow");
-            self.setAttribute("data-position", "left");
-          });
+          self.setAttribute("data-position", "left");
           self.appendElement("div", (self) => {
             self.addClassName("navigation-number");
             self.appendTextNode((number - 1).toString());
@@ -114,13 +103,10 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
         self.appendElement("a", (self) => {
           self.addClassName("navigation-link");
           self.setAttribute("href", (number + 1).toString() + ".html");
+          self.setAttribute("data-position", "right");
           self.appendElement("div", (self) => {
             self.addClassName("navigation-number");
             self.appendTextNode((number + 1).toString());
-          });
-          self.appendElement("div", (self) => {
-            self.addClassName("navigation-arrow");
-            self.setAttribute("data-position", "right");
           });
         });
       }

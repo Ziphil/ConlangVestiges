@@ -7,7 +7,7 @@
   \header|class="top"|<
     \div|class="top-inner"|<
       \div|class="top-title"|<
-        \h1|class="top-title-japanese"|<言語創造の痕跡展>
+        \h1|class="top-title-japanese"|<\span<言語創造の>\span<痕跡展>>
         \div|class="top-title-latin"|<VESTIGIA CONLINGUARUM>
       >
       \div|class="top-description"|<
@@ -15,7 +15,7 @@
           改定を重ねた結果、作者ですら読めなくなった過去の言語たち。
         >
         \p|class="top-paragraph"|<
-          作り始めてはみたものの、その後製作が続かず放って置かれてる言語たち。
+          作り始めてはみたものの、その後製作が続かず放って置かれている言語たち。
         >
         \p|class="top-paragraph"|<
           これは、そんな何もしなければ忘れ去られてしまう言語たちの痕跡です。

@@ -34,6 +34,10 @@
   font-weight: bold;  
   color: $accent-color;
   letter-spacing: 0.2em;
+  & >span {
+    display: inline-block;
+    white-space: nowrap;
+  }
 }
 
 .top-title-latin {
