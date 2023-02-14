@@ -7,13 +7,13 @@ import {
 
 const manager = new AvendiaTemplateManager();
 
-manager.registerElementRule("html", "", (transformer, document, element) => {
+manager.registerElementRule("top", "", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  self.appendChild(transformer.apply(element, "html"));
+  self.appendChild(transformer.apply(element, "top"));
   return self;
 });
 
-manager.registerElementRule("list", "html", (transformer, document, element) => {
+manager.registerElementRule("list", "top", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendSection("section", (sectionSelf, self) => {
     sectionSelf.addClassName("section-list");
@@ -25,7 +25,7 @@ manager.registerElementRule("list", "html", (transformer, document, element) => 
   return self;
 });
 
-manager.registerElementRule("item", "html", (transformer, document, element) => {
+manager.registerElementRule("item", "top", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const number = +element.getAttribute("number");
   self.appendElement("li", (self) => {
@@ -64,7 +64,25 @@ manager.registerElementRule("exhibitor", "item", (transformer, document, element
   return self;
 });
 
-manager.registerElementRule(true, "html", (transformer, document, element) => {
+manager.registerElementRule("separator", "top", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendChild(transformer.call("separator", element));
+  return self;
+});
+
+manager.registerElementFactory("separator", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendSection("div", (sectionSelf, self) => {
+    sectionSelf.addClassName("section-separator");
+    self.addClassName("section-inner-separator");
+    self.appendElement("div", (self) => {
+      self.addClassName("dot");
+    });
+  });
+  return self;
+});
+
+manager.registerElementRule(true, "top", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     for (let i = 0 ; i < element.attributes.length ; i ++) {

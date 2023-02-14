@@ -2,13 +2,13 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 
-\html<
+\top<
 
   \header|class="top"|<
     \div|class="top-inner"|<
       \div|class="top-title"|<
         \h1|class="top-title-japanese"|<\span<言語創造の>\span<痕跡展>>
-        \div|class="top-title-latin"|<VESTIGIA CONLINGUARUM>
+        \div|class="top-title-latin"|<\span<VESTIGIA> \span<CONLINGVARVM>>
       >
       \div|class="top-description"|<
         \p|class="top-paragraph"|<
@@ -92,6 +92,33 @@
     \item|number="17"|<
       \title<言語名なし>
       \exhibitor<İsoıülı>
+    >
+  >
+
+  \separator;
+
+  \section|class="section section-request"|<
+    \div|class="section-inner"|<
+      \h2|class="request-heading"|<出展言語募集中>
+      \div|class="request-main"|<
+        \div|class="content"|<
+          \p|class="paragraph"|<
+            言語創造の痕跡展は、展示させていただける言語を募集しています。
+            自分ですら読めなくなった人工言語や、途中で製作をやめてしまった人工言語をお持ちの方は、以下のフォームより出展をお願いします。
+            複数の言語を出展したい場合は、お手数ですが言語の分だけフォームの送信をお願いします。
+          >
+          \a|class="request-button",href="https://forms.gle/CAwkSo26kUdQDihq9",target="_blank"|<出展フォーム>
+          \ul<
+            \li<
+              展示の際に、画像資料をトリミングしたり、テキスト資料の一部分をカットしたりする場合があります。
+              どうしてもそのまま展示してほしい場合はその旨をお伝えください。
+            >
+            \li<
+              資料の著作権は出展者に帰属します。
+            >
+          >
+        >
+      >
     >
   >
 

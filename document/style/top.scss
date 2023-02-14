@@ -46,7 +46,11 @@
   padding-inline-start: 4px;
   font-size: 250%;
   color: rgba($accent-color, 0.5);
-  letter-spacing: 0.25em;
+  letter-spacing: 0.29em;
+  & >span {
+    display: inline-block;
+    white-space: nowrap;
+  }
 }
 
 .top-description {
@@ -69,7 +73,7 @@
 .list {
   column-gap: 48px;
   row-gap: 48px;
-  color: $primary-color;
+  color: $secondary-color;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -86,8 +90,13 @@
   background-position: left 6px top 6px, right 6px bottom 6px, left bottom, left top;
   background-repeat: no-repeat;
   background-size: (32.28348px * 2.5) (32.28382px * 2.5), (32.28348px * 2.5) (32.28382px * 2.5), 100% 100%;
+  transform: translate(0px, 0px);
+  transition: transform ease 0.2s;
   display: flex;
   align-items: center;
+  &:hover {
+    transform: translate(0px, -4px);
+  }
 }
 
 .list-main {
@@ -113,4 +122,44 @@
 
 .list-exhibitor {
   margin-block-start: 12px;
+}
+
+.section-separator {
+  margin-block-start: 64px;
+}
+
+.section-inner-separator {
+  column-gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before,
+  &::after {
+    width: 65.89995px * 2.5;
+    height: 12.45475px * 2.5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 0;
+    flex-shrink: 0;
+    content: "";
+  }
+  &::before {
+    background-image: url("../material/separator-left.svg");
+  }
+  &::after {
+    background-image: url("../material/separator-right.svg");    
+  }
+}
+
+.section-request {
+  margin-block-start: 64px;
+  color: $black-color;
+}
+
+.request-heading {
+  font-size: 150%;
+  font-weight: bold;
+  color: $primary-color;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
 }

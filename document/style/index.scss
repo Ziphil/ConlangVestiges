@@ -12,7 +12,6 @@ html {
 
 body {
   @include text-size-adjust;
-  color: $text-color;
   background-color: $background-color;
   font-family: "EB Garamond", "Shippori Mincho B1", serif;;
   font-weight: normal;

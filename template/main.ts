@@ -139,17 +139,23 @@ manager.registerElementRule("exhibit-webpage", "page", (transformer, document, e
 
 manager.registerElementRule("description", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  self.appendSection("div", (sectionSelf, self) => {
-    sectionSelf.addClassName("section-separator");
-    self.addClassName("section-inner-separator");
-    self.appendElement("div", (self) => {
-      self.addClassName("dot");
-    });
-  });
+  self.appendChild(transformer.call("dot", element));
   self.appendSection("section", (sectionSelf, self) => {
     sectionSelf.addClassName("section-description");
     self.addClassName("section-inner-description");
     self.appendChild(transformer.apply(element, "description"));
+  });
+  return self;
+});
+
+manager.registerElementFactory("dot", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendSection("div", (sectionSelf, self) => {
+    sectionSelf.addClassName("section-dot");
+    self.addClassName("section-inner-dot");
+    self.appendElement("div", (self) => {
+      self.addClassName("dot");
+    });
   });
   return self;
 });
@@ -163,17 +169,17 @@ manager.registerElementRule("comment", "description", (transformer, document, el
       self.appendTextNode("出展者のコメント");
     });
     self.appendElement("div", (self) => {
-      self.addClassName("comment-main");
+      self.addClassName("content");
       self.appendChild(transformer.apply(element));
     });
   });
   return self;
 });
 
-manager.registerElementRule("p", "description", (transformer, document, element) => {
+manager.registerElementRule("p", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("p", (self) => {
-    self.addClassName("comment-paragraph");
+    self.addClassName("paragraph");
     self.appendChild(transformer.apply(element));
   });
   return self;
@@ -206,7 +212,7 @@ manager.registerElementRule("date", "description", (transformer, document, eleme
   return self;
 });
 
-manager.registerElementRule("footer", ["page", "html"], (transformer, document, element, scope) => {
+manager.registerElementRule("footer", ["page", "top"], (transformer, document, element, scope) => {
   const self = document.createDocumentFragment();
   if (scope === "page") {
     self.appendSection("section", (sectionSelf, self) => {
