@@ -1,0 +1,31 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page|number="18"|<
+
+  \header;
+  \title<字声語`/卜殸話>
+
+  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+
+  \description<
+    \comment<
+      \p<
+        最初期に作成していた全て象形・会意・指示文字からできた補助語です。
+        メツィ諸語を作り始めたのと、漢字についての知識があまりにもないので作成を断念しました。
+        構想としては表音かつ表意文字で、漢字の構成や個数によって声調が変化するというのを考えていました。
+      >
+      \p<
+        人 `/jō`/, 木 `/sā`/, 林 `/sá`/, 森 `/sǎ`/, 休 `/jösã`/。
+      >
+    >
+    \information<
+      \exhibitor<luzax=melo>
+      \date<2023`/02`/16>
+    >
+  >
+
+  \footer;
+
+>

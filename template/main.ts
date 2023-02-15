@@ -1,11 +1,12 @@
 //
 
+import fs from "fs";
 import {
   AvendiaTemplateManager
 } from "../generator/transformer";
 
 
-const MAX_PAGE = 17;
+const maxNumber = fs.readdirSync("./document/exhibit").length;
 
 const manager = new AvendiaTemplateManager();
 
@@ -102,7 +103,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
     });
     self.appendElement("div", (self) => {
       self.addClassName("navigation-link-container");
-      if (number < MAX_PAGE) {
+      if (number < maxNumber) {
         self.appendElement("a", (self) => {
           self.addClassName("navigation-link");
           self.setAttribute("href", (number + 1).toString() + ".html");
