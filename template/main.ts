@@ -14,6 +14,7 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const number = +element.getAttribute("number");
   transformer.variables.number = number;
+  transformer.variables.urlPrefix = "../";
   self.appendChild(transformer.apply(element, "page"));
   return self;
 });

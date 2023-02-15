@@ -9,6 +9,7 @@ const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("top", "", (transformer, document, element) => {
   const self = document.createDocumentFragment();
+  transformer.variables.urlPrefix = "";
   self.appendChild(transformer.apply(element, "top"));
   return self;
 });

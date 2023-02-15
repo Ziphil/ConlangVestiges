@@ -88,8 +88,9 @@ manager.registerElementRule("footer", ["page", "top"], (transformer, document, e
       self.addClassName("footer-inner");
       self.appendElement("div", (self) => {
         self.addClassName("footer-left");
-        self.appendElement("div", (self) => {
+        self.appendElement("a", (self) => {
           self.addClassName("footer-title");
+          self.setAttribute("href", transformer.variables.urlPrefix + "index.html");
           self.appendTextNode("言語創造の痕跡展");
         });
         self.appendElement("div", (self) => {
