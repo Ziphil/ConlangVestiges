@@ -65,6 +65,26 @@ manager.registerElementRule("exhibitor", "item", (transformer, document, element
   return self;
 });
 
+manager.registerElementRule("request", "top", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendChild(transformer.call("separator"));
+  self.appendSection("section", (sectionSelf, self) => {
+    sectionSelf.addClassName("section-request");
+    self.appendElement("h2", (self) => {
+      self.addClassName("request-heading");
+      self.appendTextNode("展示言語募集中");
+    });
+    self.appendElement("div", (self) => {
+      self.addClassName("request-main");
+      self.appendElement("div", (self) => {
+        self.addClassName("content");
+        self.appendChild(transformer.apply(element));
+      });
+    });
+  });
+  return self;
+});
+
 manager.registerElementRule(true, "top", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
