@@ -134,5 +134,19 @@
   font-weight: bold;
   color: $primary-color;
   letter-spacing: 0.05em;
-  align-self: flex-start;
+}
+
+.request-button {
+  padding-block: 8px;
+  padding-inline: 12px;
+  font-size: 125%;
+  font-weight: bold;
+  color: $secondary-color;
+  background-color: $accent-color;
+  align-self: center;
+  transform: translate(0px, 0px);
+  transition: transform ease 0.2s;
+  &:hover {
+    transform: translate(0px, -2px);
+  }
 }
