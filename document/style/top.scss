@@ -73,7 +73,7 @@
 .table {
   column-gap: 48px;
   row-gap: 48px;
-  color: $secondary-color;
+  color: $primary-color;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -137,16 +137,18 @@
 }
 
 .request-button {
-  padding-block: 8px;
+  padding-block: 6px;
   padding-inline: 12px;
   font-size: 125%;
   font-weight: bold;
   color: $secondary-color;
-  background-color: $accent-color;
+  background-image: linear-gradient(to bottom, transparent 0%, $accent-color 0%);
+  background-size: 100% 40%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
   align-self: center;
-  transform: translate(0px, 0px);
-  transition: transform ease 0.2s;
+  transition: background-size ease 0.2s;
   &:hover {
-    transform: translate(0px, -2px);
+    background-size: 100% 100%;
   }
 }

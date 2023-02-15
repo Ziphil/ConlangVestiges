@@ -107,12 +107,13 @@
 }
 
 .navigation-link {
-  padding-inline: 8px;
+  padding-block: 4px;
+  padding-inline: 12px;
   column-gap: 12px;
   font-size: 175%;
   color: $secondary-color;
   background-image: linear-gradient(to bottom, transparent 0%, $accent-color 0%);
-  background-size: 100% 30%;
+  background-size: 100% 40%;
   background-position: left bottom;
   background-repeat: no-repeat;
   display: flex;
