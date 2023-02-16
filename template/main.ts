@@ -120,21 +120,49 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
   return self;
 });
 
-manager.registerElementRule("exhibit-webpage", "page", (transformer, document, element) => {
+manager.registerElementRule("exhibit", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const path = element.getAttribute("src");
+  const type = element.getAttribute("type");
   self.appendSection("section", (sectionSelf, self) => {
-    sectionSelf.addClassName("section-exhibit");
+    self.addClassName("section-exhibit");
     self.appendElement("div", (self) => {
       self.addClassName("exhibit");
+      self.setAttribute("data-type", type);
       self.appendElement("div", (self) => {
         self.addClassName("exhibit-inner");
-        self.appendElement("iframe", (self) => {
-          self.addClassName("exhibit-iframe");
-          self.setAttribute("src", path);
-        });
+        self.setAttribute("data-type", type);
+        self.appendChild(transformer.apply(element, "exhibit"));
       });
     });
+  });
+  return self;
+});
+
+manager.registerElementRule("exhibit-webpage", "exhibit", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const path = element.getAttribute("src");
+  self.appendElement("iframe", (self) => {
+    self.addClassName("exhibit-webpage");
+    self.setAttribute("src", path);
+  });
+  return self;
+});
+
+manager.registerElementRule("exhibit-image", "exhibit", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const path = element.getAttribute("src");
+  self.appendElement("img", (self) => {
+    self.addClassName("exhibit-image");
+    self.setAttribute("src", path);
+  });
+  return self;
+});
+
+manager.registerElementRule("exhibit-text", "exhibit", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("p", (self) => {
+    self.addClassName("exhibit-text");
+    self.appendChild(transformer.apply(element));
   });
   return self;
 });

@@ -7,7 +7,36 @@
   \header;
   \title<gua>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+  \exhibit|type="text"|<
+    \exhibit-text~*<
+      こんにちは。
+      i ah u
+
+      私は XXX (あなたの名前を入れて下さい) です。
+      i``o4nm s XXX
+
+      これは何ですか?
+      ?`` s 1``
+
+      これはリンゴです。
+      ``s ap
+
+      これは大きなリンゴです。
+      1`` s p1ap
+
+      これはあなたのリンゴですか?
+      ?1`` s u``o1ap
+
+      これは私のリンゴです。
+      1`` a i``o1ap
+
+      (私から近いところを指して) このリンゴは小さい。
+      1ap1-a
+
+      (あなたから近いところを指して) そのリンゴは大きい。
+      1ap1a
+    >
+  >
 
   \description<
     \comment<

@@ -7,8 +7,10 @@
   \header;
   \title<TYWY (ティーウィ)>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
-
+  \exhibit|type="image"|<
+    \exhibit-image|src="https://drive.google.com/uc?export=download&id=1QV9pULR8zY8owLZEnQsSoCRA97OPiEkg"|;
+  >
+  
   \description<
     \comment<
       \p<

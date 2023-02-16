@@ -7,7 +7,9 @@
   \header;
   \title<ラパニナ語>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+  \exhibit|type="image"|<
+    \exhibit-image|src="https://drive.google.com/uc?export=download&id=15T4tmBylKJ8XPmhGi00P0sz08RaAZ1wS"|;
+  >
 
   \description<
     \comment<

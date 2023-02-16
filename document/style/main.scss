@@ -154,20 +154,46 @@
 }
 
 .exhibit {
-  aspect-ratio: 6 / 7;
   border: solid $primary-color 24px;
   @include smartphone {
     border-width: 12px;
+  }
+  &[data-type="webpage"] {
+    aspect-ratio: 6 / 7;
   }
 }
 
 .exhibit-inner {
   width: 100%;
   height: 100%;
+  background-color: white;
   border: solid $accent-color 2px;
+  &[data-type="image"],
+  &[data-type="text"] {
+    padding-block: 24px;
+    padding-inline: 32px;
+    row-gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &[data-type="text"] {
+    max-height: 1600px;
+    overflow: auto;
+  }
 }
 
-.exhibit-iframe {
+.exhibit-image {
+  max-width: 100%;
+}
+
+.exhibit-text {
+  @include line-height(1.5);
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.exhibit-webpage {
   width: 100%;
   height: 100%;
   border: none;

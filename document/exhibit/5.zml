@@ -7,7 +7,9 @@
   \header;
   \title<エープリースタ語>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+  \exhibit|type="webpage"|<
+    \exhibit-webpage|src="https://w.atwiki.jp/gionshantveed/pages/672.html"|;
+  >
 
   \description<
     \comment<

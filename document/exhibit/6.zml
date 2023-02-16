@@ -7,7 +7,125 @@
   \header;
   \title<魔人族語>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+  \exhibit|type="text"|<
+    \exhibit-text~*<
+      さて、この下らないシリーズは前年の 11 月からさっぱり更新を止めてしまったわけだが、ここに来て今季 2019 夏アニメの人工言語率は異常とも言えよう (そんなに高いか?)。そんなときにこのシリーズが動かずして誰が語るのだろうか?
+      今回扱うのは「うちの娘の為ならば、俺はもしかしたら魔王も倒せるかもしれない。」(以下、公式略称に沿い「うちの娘」と省略) である。本編に登場しない魔人族語がアニメでははっきりと聞こえてくるので躍起になって解析を始めた。
+
+      ただ、同じ人工言語が登場する作品、他の作品のそれとうちの娘の魔人族語では確かに力の入れ具合が違う。しっかりと辞書や文法、表現が考えられて (より正確に換言するなら決められて)、作品に登場しているのに対して魔人族語は単純に言い切るなら「英語を逆から読んで適当に並べたもの」である。ただ、より標準化されていないナマの言語というものに触れるにあたって、私には綺麗に作られたものよりも魔人族語はより身体性の生々しい現象だと感じる。それは解析すればするほどにうちの娘という作品の枠を超えてこの言語を決定した者自身の身体性を私達に生々しく体験させる。だからこそ、私はこの解析を続けていたが三話でほぼ出てこなくなったためここらで一度記事をまとめてみようと思ったわけである。
+      
+      前置きが長くなった気がするが、ともかく今回は魔人族語について愚行することにする。あと、これははっきり言っておくがラティナは臨界期過ぎてると思うわなにをするやめｒ
+      
+      情報をすっきりさせるためにアニメから得られた情報のみに絞る。魔人族語は魔人族の話す言語であり、魔法を使う際の呪文語と同じであるとされている。メタ的にはほとんどの単語は英単語を逆から綴り、一定の音声法則に従って禁則処理したものである。しかし、元の英単語と意味範疇が同じというわけではないので注意が必要である。例として、nwowoknu (`< unknown) は「知られていない、不明の」ではなく「分からない、理解できない (状態である)」の意である (もしくは区別していない)。
+
+      0. 禁則処理
+
+      ht (`< th) → hut
+      Ex) Futobu (`< both)　共に
+
+      coda の h の消滅`/ f 化
+      Ex.1) Ere (`< here)　ここ、この場所
+      Ex.2) Donaf (`< hand)　手、離して (?)
+
+      ts, tc (`< st, ct) の変化 (詳細不明)
+      Ex.1) Noitanitedo (`< destination)　到着地
+      Ex.2) Noisek(a`/u)　疑問の機能語
+      Ex.3) Yatos (`< stay)　居る
+      Ex.4) Tuserok (`< correct)　正しい
+      → `[ts`] の禁則処理は多くの例外が存在し、良く分からなかった。
+
+      1. SOV Po、副詞は動詞の前に来る。
+
+      Im’ futobu wofuto ogu?
+      「我、共に、汝、行く?」
+      (I’m both thou go?)
+
+      Rekunato monoke reftaku emoku.
+      「獣が集まってきて危ないから」
+      (danger けもの gather come.)
+
+      1.1. コピュラは基本的に省略される (というかコーパスに出現しない)
+
+      Im’ eman deir
+      「我が名はデイル」
+      (I’m name deir.)
+
+      2. 疑問は noisek(a`/u) を文頭に置く。
+
+      Noiseka kramêr?
+      「なんて言ったの?」
+      (Question remark?)
+
+      Noiseka MAETOFIRUTO?
+      「くれるの?」
+      (Question `[不明`]?)
+
+      Noiseku noitanitedo?
+      「どこに行くの」
+      (Question distination?)
+
+      Noiseku im’ NOE?
+      「食べていい?」
+      (Question I’m `[不明`]?)
+
+      2.1. ただし、コピュラの疑問表現では省略されている。
+
+      Wofuto eman?
+      「汝、名は?」
+      (Thou name?)
+
+      3. 禁止は否定を表す動詞 rainedo を主動詞、元の主動詞を語尾に置く。ドイツ語などの助動詞と同じ。
+
+      Ragu lained erisebu yatos.
+      「ラグに近くにいちゃダメだって言われたの」
+      (Ragu denial besides stay)
+
+      Noitarapes itefas rainedo naratêra.
+      「離れろ、近くにくるなって」
+      (Separation safety denial `[不明`].)
+
+      以下は収集された単語である。
+
+      noisek(a`/u) (`< question)　疑問表現に前置する
+      emoku (`< come)　来る、近づく、集まる
+      merpurpa? (`< problem?)　大丈夫?
+      gratīdo　ありがとう
+      eman (`< name)　名前
+      im’  (`< i -’m)　我
+      wofuto  (`< thou?)　汝
+      futobu  (`< both)　共に (?)
+      ogu  (`< go)　行く (?)
+      rainedo (`< denial)　否定
+      yatos (`< stay)　居る
+      eta (`< hate)　嫌 (?)
+      terio (`< toiret)　トイレ
+      merporpu (`< problem)　問題
+      ekaton (`< mistake)　間違っている
+      inafu (`< funny)　変である
+      tuserok (`< correct)　正しい
+      noitanitedo (`< destination)　到着点 (?)
+      monoke (`< けもの)　獣
+      rekunato (`< denger)　危険な
+      kreftaku (`< gather)　こぞって、集まって
+      erisebu (`< beside)　近くに、近づいて (?)
+      tusetorpu (`< protect)　護る
+      esnetosikzi (`< existence)　存在?
+      suifto (`< this)　これ
+      erassen (`< nessesary)　必要
+      kramêr (`< remark)　言う、発言する
+      nyowonknu (`< unknown)　分からない、理解できない
+      kurō (`< work)　外部、外へ
+      yatus (`< stay)　yatos の異形態 or 待つ、待機する
+      ere (`< here)　ここ、この場所
+      rekna (`< anger)　怒る、不機嫌になっている
+      donaf (`< hand)　手、離して (?)
+
+      上記に収集されたものを見て、英語とは似ても似つかない言語であることが分かるだろうか? というより、英語に似ているものを全て英語とみなすのも問題である。パプアニューギニアの人の前で「トク・ピシンは崩れた英語である」と言えるものなら言ってみろということである。
+      ともあれ、これ以上魔人族語はあまり出てこなさそうなので言語自体への探求は終わりである。
+
+      (頭を使わずひたすら適当に書いた愚考文、以上)
+    >
+  >
 
   \description<
     \comment<

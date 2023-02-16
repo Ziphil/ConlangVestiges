@@ -7,7 +7,10 @@
   \header;
   \title<肉雌語 (NIKUME language)>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+  \exhibit|type="image"|<
+    \exhibit-image|src="https://drive.google.com/uc?export=download&id=1JHl_Jm0ysyFLlkLwb2SS6jymlpm2nXJt"|;
+    \exhibit-image|src="https://drive.google.com/uc?export=download&id=18daCnOs8PVX4SJ7VfgA5Qhj4zWdNs5dm"|;
+  >
 
   \description<
     \comment<
