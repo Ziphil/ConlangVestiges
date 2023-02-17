@@ -95,7 +95,7 @@ manager.registerElementRule("footer", ["page", "top"], (transformer, document, e
         });
         self.appendElement("div", (self) => {
           self.addClassName("footer-organizer");
-          self.appendTextNode("Organized by ");
+          self.appendTextNode("Organised by ");
           self.appendElement("a", (self) => {
             self.addClassName("footer-link");
             self.setAttribute("href", "https://ziphil.com");
