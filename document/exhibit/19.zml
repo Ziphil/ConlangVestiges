@@ -1,0 +1,30 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page|number="19"|<
+
+  \header;
+  \title<古代ウリ語>
+
+  \exhibit|type="image"|<
+    \exhibit-image|src="https://drive.google.com/uc?export=download&id=1gnt3IuXLIzH4lZyAtDjypmdXQ3--6xDG"|;
+  >
+
+  \description<
+    \comment<
+      \p<
+        古代ウリ語の造語時の記録である。
+        サイコロを使って造語していたため数字の記録になっている。
+        この表を使えば単語自体はある程度復元できるが、意味との対応は資料が無いために完全に失われており、まさに解読できない古代言語となっている。
+      >
+    >
+    \information<
+      \exhibitor<たるぼし>
+      \date<2023`/02`/17>
+    >
+  >
+
+  \footer;
+
+>
