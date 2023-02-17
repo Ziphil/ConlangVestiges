@@ -148,6 +148,16 @@ manager.registerElementRule("exhibit-webpage", "exhibit", (transformer, document
   return self;
 });
 
+manager.registerElementRule("exhibit-pdf", "exhibit", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const path = element.getAttribute("src");
+  self.appendElement("iframe", (self) => {
+    self.addClassName("exhibit-pdf");
+    self.setAttribute("src", path);
+  });
+  return self;
+});
+
 manager.registerElementRule("exhibit-image", "exhibit", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const path = element.getAttribute("src");
