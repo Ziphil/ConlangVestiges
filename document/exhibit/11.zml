@@ -7,8 +7,8 @@
   \header;
   \title<xaana palaadi (シャーナ パラーディ)>
 
-  \exhibit|type="webpage"|<
-    \exhibit-webpage|src="https://sites.google.com/site/xaanapalaadi/home"|;
+  \exhibit|type="link"|<
+    \exhibit-link|href="https://sites.google.com/site/xaanapalaadi/home"|;
   >
 
   \description<

@@ -177,6 +177,25 @@ manager.registerElementRule("exhibit-text", "exhibit", (transformer, document, e
   return self;
 });
 
+manager.registerElementRule("exhibit-link", "exhibit", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const path = element.getAttribute("href");
+  self.appendElement("div", (self) => {
+    self.addClassName("exhibit-link");
+    self.appendElement("p", (self) => {
+      self.addClassName("exhibit-link-explanation");
+      self.appendTextNode("資料ページの埋め込みが許可されていないため、以下のリンクから別タブでご覧ください。");
+    });
+    self.appendElement("a", (self) => {
+      self.addClassName("exhibit-link-link");
+      self.setAttribute("href", path);
+      self.setAttribute("target", "_blank");
+      self.appendTextNode("資料ページへ");
+    });
+  });
+  return self;
+});
+
 manager.registerElementRule("description", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendChild(transformer.call("dot", element));
