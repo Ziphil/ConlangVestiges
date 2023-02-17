@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   @include smartphone {
-    padding-block-start: 128px;
+    padding-block-start: 160px;
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }
@@ -39,6 +39,9 @@
     display: inline-block;
     white-space: nowrap;
   }
+  @include smartphone {
+    font-size: 400%;
+  }
 }
 
 .top-title-latin {
@@ -50,6 +53,9 @@
   & >span {
     display: inline-block;
     white-space: nowrap;
+  }
+  @include smartphone {
+    font-size: 200%;
   }
 }
 
