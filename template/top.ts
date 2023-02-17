@@ -40,14 +40,14 @@ manager.registerElementRule("item", "top", (transformer, document, element) => {
           self.addClassName("table-number");
           self.appendTextNode(number.toString());
         });
-        self.appendChild(transformer.apply(element, "item"));
+        self.appendChild(transformer.apply(element, "top.item"));
       });
     });
   });
   return self;
 });
 
-manager.registerElementRule("title", "item", (transformer, document, element) => {
+manager.registerElementRule("title", "top.item", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("h2", (self) => {
     self.addClassName("table-title");
@@ -56,7 +56,7 @@ manager.registerElementRule("title", "item", (transformer, document, element) =>
   return self;
 });
 
-manager.registerElementRule("exhibitor", "item", (transformer, document, element) => {
+manager.registerElementRule("exhibitor", "top.item", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
     self.addClassName("table-exhibitor");
@@ -70,17 +70,48 @@ manager.registerElementRule("request", "top", (transformer, document, element) =
   self.appendChild(transformer.call("separator"));
   self.appendSection("section", (sectionSelf, self) => {
     sectionSelf.addClassName("section-request");
-    self.appendElement("h2", (self) => {
-      self.addClassName("request-heading");
-      self.appendTextNode("展示言語募集中");
-    });
-    self.appendElement("div", (self) => {
+    self.appendElement("section", (self) => {
       self.addClassName("request-main");
-      self.appendElement("div", (self) => {
-        self.addClassName("content");
-        self.appendChild(transformer.apply(element));
-      });
+      self.appendChild(transformer.apply(element, "top.request"));
     });
+  });
+  return self;
+});
+
+manager.registerElementRule("content", "top.request", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("div", (self) => {
+    self.addClassName("content");
+    self.appendChild(transformer.apply(element));
+  });
+  return self;
+});
+
+manager.registerElementRule("h2", "top.request", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("h2", (self) => {
+    self.addClassName("request-heading");
+    self.appendChild(transformer.apply(element));
+  });
+  return self;
+});
+
+manager.registerElementRule("h3", "top.request", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("h3", (self) => {
+    self.addClassName("request-subheading");
+    self.appendChild(transformer.apply(element));
+  });
+  return self;
+});
+
+manager.registerElementRule("button", "top.request", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("a", (self) => {
+    self.addClassName("request-button");
+    self.setAttribute("href", "https://forms.gle/CAwkSo26kUdQDihq9");
+    self.setAttribute("target", "_blank");
+    self.appendChild(transformer.apply(element));
   });
   return self;
 });

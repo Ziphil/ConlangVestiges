@@ -136,11 +136,20 @@
 }
 
 .request-heading {
+  font-size: 175%;
+  font-weight: bold;
+  color: $primary-color;
+  letter-spacing: 0.1em;
+}
+
+.request-subheading {
+  margin-block-start: 48px;
   font-size: 150%;
   font-weight: bold;
   color: $primary-color;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
+
 
 .request-button {
   padding-block: 6px;
