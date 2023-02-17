@@ -7,7 +7,39 @@
   \header;
   \title<kasini>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+  \exhibit|type="text"|<
+    \exhibit-text~*<
+      # 設定
+        ## 品詞
+        * 代詞
+        * 動性詞
+        * 静性詞
+        * 前置詞
+        * 修飾詞
+
+          ### 動性詞
+          * 「動きのあるもの・こと」という存在・概念を表す品詞
+          * 名詞のうち動物名のものや動作性の高い動詞が含まれる．
+
+          ### 静性詞
+          * 「動きがないもの・こと」「動きがよわいもの・こと」という存在・概念を表す品詞
+          * 名詞のうち物体名のものや形容詞，動作性の低い動詞が含まれる．
+
+          ### 代詞
+          * 代名詞や代動詞みたいなもの．代動性詞と代静性詞がある．
+
+      # 語順
+
+      # 平叙文
+      * uxanasa utare biluto oli eliivu. 「私は本を読む．」
+      * uxanasa amila xe eliivu ru uxanasa upi eliivu ru lesisa. 「私は私の家から貴方の家へ行く．」
+      * uxanasa sudasa xulego. 「私は家で魚を食べる．」
+
+      # 疑問文
+      * lesisa utare biluto oli eliivu go? 「貴方は本を読むか?」
+      * lesisa sudasa xulego go? 「貴方は家で魚を食べるか?」
+    >
+  >
 
   \description<
     \comment<

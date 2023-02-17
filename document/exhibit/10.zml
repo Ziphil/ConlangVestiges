@@ -7,8 +7,11 @@
   \header;
   \title<ALA (アラ)>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
-
+  \exhibit|type="image"|<
+    \exhibit-image|src="https://drive.google.com/uc?export=download&id=1hBiqK9lyJ1pxQ0X6RIhemU4mnBQgsSCD"|;
+    \exhibit-image|src="https://drive.google.com/uc?export=download&id=1HOf8VXLqehLEkgIOKaAbAECq-4Rhdlqk"|;
+  >
+  
   \description<
     \comment<
       \p<

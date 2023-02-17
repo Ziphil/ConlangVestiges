@@ -7,8 +7,10 @@
   \header;
   \title<第五期ルエン語・レイア語 (レオン語)>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
-
+  \exhibit|type="pdf"|<
+    \exhibit-pdf|src="https://drive.google.com/file/d/1krvk-zMjkPMB8nCRylr1nXYSDRYFKvYG/preview"|;
+  >
+  
   \description<
     \comment<
       \p<

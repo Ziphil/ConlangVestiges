@@ -7,7 +7,9 @@
   \header;
   \title<言語名なし>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+  \exhibit|type="pdf"|<
+    \exhibit-pdf|src="https://drive.google.com/file/d/17pQ8pdgKgyyw8mpRnt4X3aQkN8W7Iypp/preview"|;
+  >
 
   \description<
     \comment<

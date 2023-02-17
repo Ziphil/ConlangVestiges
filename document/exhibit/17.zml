@@ -7,7 +7,32 @@
   \header;
   \title<言語名なし>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+  \exhibit|type="text"|<
+    \exhibit-text~*<
+      IꚚМѺФΛꙘѪПХYѲꙊꙈНЖꙨӾ
+      ɪꚛмѻфʌꙙѫпхʏѳɤꙉнжꙩӿ　文字
+
+      i a n ɡ q ɘ b m ħ x y ɞ ʐ t ʁ k o ʄ
+      / i a m e j f - | p n s u w h l k o - /　割文字 (?)
+
+      Іѻӿ /tɪː/
+      Ꚛӿꙉ /ɑːʰ/
+      Мꙩн /mol/
+      Ѻӿꙉ /jeːʰ/
+      Λѳж /fuk/
+      Ꙙӿɪꚛѻ /θæːʰ/
+      Ѫӿꙩꙙх /ʒoŋ/
+      Пѻӿ /pɪː/
+      Хѳм /nʊm/
+      Yꚛꙙӿʏ /sɑʃ/
+      Ѳӿꙉ /ɯːʰ/
+      Ꙉӿꙩʌ /wʰof/
+      Нѻѳӿ /lʲun/
+      Жꙙнꙩʏ /kɹos/
+      Ꙩӿꙉ /oːʰ/
+      Ӿӿѻӿ /hɪː/　文字の読み (?)
+    >
+  >
 
   \description<
     \comment<

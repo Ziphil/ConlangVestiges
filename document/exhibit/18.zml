@@ -7,7 +7,9 @@
   \header;
   \title<字声語`/卜殸話>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
+  \exhibit|type="webpage"|<
+    \exhibit-webpage|src="https://zpdic.ziphil.com/dictionary/559"|;
+  >
 
   \description<
     \comment<

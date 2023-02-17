@@ -7,8 +7,10 @@
   \header;
   \title<言語名なし>
 
-  \exhibit-webpage|src="https://rentry.co/zhlayar"|;
-
+  \exhibit|type="image"|<
+    \exhibit-image|src="https://drive.google.com/uc?export=download&id=1d2JnAI-wMsVQXwvSQgIcvSVZziy7qR3u"|;
+  >
+  
   \description<
     \comment<
       \p<
