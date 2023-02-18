@@ -1,0 +1,32 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page|number="23"|<
+
+  \header;
+  \title<忘れられた名前の言語 (仮称)>
+
+  \exhibit|type="text"|<
+    \exhibit-text~*<
+      A'Toktikalt vot ktaltokant. T'O'Stankt!
+    >
+  >
+
+  \description<
+    \comment<
+      \p<
+        創作者が小学校 6 年生の頃に Minecraft の中の言語として創作した言語です。
+        この言語は創作者ももう読めませんが文法の一部は創作者のラクシュ語の次の言語、アルパヌ語に受け継がれました。
+        ワールドは消してしまいましたがメモが見つかったのでテキストに起こしました。
+      >
+    >
+    \information<
+      \exhibitor<Beisklafki Natron>
+      \date<2023`/02`/18>
+    >
+  >
+
+  \footer;
+
+>

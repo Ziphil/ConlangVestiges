@@ -1,0 +1,71 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page|number="20"|<
+
+  \header;
+  \title<にゃん語 (仮)>
+
+  \exhibit|type="text"|<
+    \exhibit-text~*<
+      音素
+        u o
+        a i e
+
+        p n m r x f j w 
+        pj nj mj rj tx 
+        t 
+
+      文字
+        p b / p pj 
+        n h / n nj 
+        m q / m mj
+        r l / r rj 
+        x c / x tx 
+        y w  / y w 
+        f t / f t 
+
+      発音など
+        母音字が並んだときは
+          auo の前に y
+          ie の前に w
+        を入れる
+
+        t は基礎語には使わない
+        n は単語の最後にも使える
+
+        yi wu と i u は区別しない
+        pi と bi は区別しない
+        ci と ti は区別しない
+        yi wi fi ti は区別する
+
+      語頭アクセント
+        伸ばす
+        間投詞は伸ばさなくてもいい
+        固有名詞は伸ばす
+
+      語彙
+        han　同意 肯定
+        poha　いい
+    >
+  >
+
+  \description<
+    \comment<
+      \p<
+        「文字」のところは左が書く文字で右が発音。
+        x はシャ行、j はヤ行の音。
+        「y w `/ y w」はおそらくミスで「y w `/ j w」だと思う。
+        「発音など」のところの○と○は区別しないに「ni と hi」「mi と qi」「ri と li」が抜けている。
+      >
+    >
+    \information<
+      \exhibitor<yuzuru_sofia>
+      \date<2023`/02`/17>
+    >
+  >
+
+  \footer;
+
+>

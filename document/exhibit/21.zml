@@ -1,0 +1,31 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page|number="21"|<
+
+  \header;
+  \title<フェリ語>
+
+  \exhibit|type="pdf"|<
+    \exhibit-pdf|src="https://drive.google.com/file/d/1Nc4CqL7gyfindV2_gjcWgYLxTz2ro9Mq/preview"|;
+  >
+
+  \description<
+    \comment<
+      \p<
+        約 1 年半程度、制作を頑張っていた架空世界の人工言語です。
+        アルカ, ヒュムノス, 小島氏の日本語文法を参考に作っていました。
+        本文に出てくる単語が単語リストに載ってないこともありますが仕様です。
+        もし利用したいときはご自由に (CC0 1.0 で) どうぞ。
+      >
+    >
+    \information<
+      \exhibitor<U 川>
+      \date<2023`/02`/17>
+    >
+  >
+
+  \footer;
+
+>
