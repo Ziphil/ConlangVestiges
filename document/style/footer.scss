@@ -25,7 +25,6 @@
 
 .footer-left {
   row-gap: 8px;
-  color: $primary-color;
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
@@ -36,6 +35,7 @@
   font-size: 125%;
   font-weight: bold;
   letter-spacing: 0.05em;
+  color: $primary-color;
 }
 
 .footer-organizer {
