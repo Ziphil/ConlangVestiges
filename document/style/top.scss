@@ -140,14 +140,24 @@
   font-weight: bold;
   color: $primary-color;
   letter-spacing: 0.1em;
+  &:not(:first-child) {
+    margin-block-start: 64px;
+  }
 }
 
 .request-subheading {
-  margin-block-start: 48px;
   font-size: 150%;
   font-weight: bold;
   color: $primary-color;
   letter-spacing: 0.1em;
+  &:not(:first-child) {
+    margin-block-start: 48px;
+  }
+}
+
+.request-link {
+  color: $secondary-color;
+  text-decoration: underline;
 }
 
 .request-button {

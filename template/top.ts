@@ -105,6 +105,18 @@ manager.registerElementRule("h3", "top.request", (transformer, document, element
   return self;
 });
 
+manager.registerElementRule("a", "top.request", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const path = element.getAttribute("href");
+  self.appendElement("a", (self) => {
+    self.addClassName("request-link");
+    self.setAttribute("href", path);
+    self.setAttribute("target", "_blank");
+    self.appendChild(transformer.apply(element));
+  });
+  return self;
+});
+
 manager.registerElementRule("button", "top.request", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("a", (self) => {
