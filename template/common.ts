@@ -36,7 +36,7 @@ manager.registerElementRule("li", true, (transformer, document, element) => {
 
 manager.registerElementRule("dash", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  self.appendElement("soan", (self) => {
+  self.appendElement("span", (self) => {
     self.addClassName("dash");
     self.appendChild(transformer.apply(element));
   });
