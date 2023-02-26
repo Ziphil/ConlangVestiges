@@ -1,0 +1,83 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page|number="24"|<
+
+  \header;
+  \title<1 代 1 期 oviaess 語>
+
+  \exhibit|type="text"|<
+    \exhibit-text~*<
+      基本は VOS・NA，能格言語
+      動詞は膠着語的もしくは複総合的．
+      名詞は屈折語的な部分があるが格変化は 3 つしかなく，その他は前置詞で表す．
+      動詞の前に絶対格を持ってくるための後置詞がある．
+      名詞クラスがいっぱいある．それに応じて動詞接辞が変わる．
+      冠詞と所有代名詞は前置される．
+
+      平叙文
+      anqte dls sefa mcalt sel.　「私は私の家に行きます．」
+      blanqte dls sefa mcalt sel.　「私は私の家に行きました．」
+      feknlo bkam simi.　「私は本を読みます．」
+      blfeknlo bkam simi.　「私は本を読みました．」
+      後置詞 sne を使うと絶対格を文頭に移動することが出来る．
+      sel sne anqte dls sefa mcalt. 　「私が私の家に行きます．」
+      bkam sne feknlo simi. 　「本を私は読みます．」
+
+      疑問文
+      文頭に fnit を置く．
+      fnit anqte sefa mcalt hod?　「彼は私の家に行きますか？」
+      fnit feknlo bkam humb.　「彼は本を読みますか？」
+
+      否定文
+      動詞の語頭に ki を付ける．
+      kianqte sefa mcalt hod. 　「彼は私の家に行きません．」
+      kiblfeknlo bkam simi. 　「私は本を(まだ)読んでいません．」
+
+      ----
+      発音
+      a  b  d  e  f  g  h  i  j  k  l  m
+      a  b  d  iː ɸ  g  h  i  ɲ  k  l  m
+      n  o  p  q  s  t  u  v  w  y  z
+      n  uː p  ŋ  s  t  u  β  w  j  z
+      j, n, m, q, l が音節になりえる．
+
+      au -`> `/oː`/
+      ai -`> `/eː`/
+      pf -`> `/p͡ɸ`/
+      bv -`> `/b͡β`/
+      sh -`> `/ʃ`/
+      zh -`> `/ʒ`/
+      ts -`> `/t͡s`/
+      dz -`> `/d͡z`/
+      tsh -`> `/t͡ʃ`/
+      dzh -`> `/d͡ʒ`/
+      tw -`> `/tʷ`/, dw -`> `/dʷ`/, kw -`> `/kʷ`/, gw -`> `/gʷ`/
+      ca -`> `/ã`/, ci -`> `/ĩ`/, ce -`> `/ĩː`/, cu -`> `/ũ`/, co -`> `/ũː`/
+      cau -`> `/õː`/, cai -`> `/ẽː`/
+      qt -`> `/ǀ`/, qy -`> `/̩ǂ`/, ql -`> `/‖`/, qs -`> `/!`/
+      cqt -`> `/ǀⁿ`/, cqy -`> `/̩ǂⁿ`/, cql -`> `/‖ⁿ`/, cqs -`> `/!ⁿ`/
+
+      その他
+      この言語で “oviaess” って綴りには異和感しかない．
+      覚えている限り国名が先にあったためだと．
+    >
+  >
+
+  \description<
+    \comment<
+      \p<
+        とある創作世界用に 2013 年に作成しようとした言語の 1 代 1 期らしい。
+        1 代 2 期を確認したところ「1 代 1 期の設定を破棄」とあり全く異なる方向にしたようだ。
+      >
+    >
+    \information<
+      \exhibitor<渡久地>
+      \date<2023`/02`/19>
+    >
+  >
+
+  \footer;
+
+>
